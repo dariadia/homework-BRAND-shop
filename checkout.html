@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>BRAND</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+</head>
+
+<body>
+    <header class="header">
+        <div class="container header-flex">
+            <div class="header-left">
+                <a class="logo" href="index.html"><img class="logo-img" src="img/logo.png" alt="logo">BRAN<span class="logo-d">D</span></a>
+                <form class="form" action="#">
+                    <div class="btn-group" role="group">
+                        <button id="btnGroupDrop1" type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <span class="browse-b">B</span>rowse
+                        </button>
+                        <div class="dropdown-menu" aria-labelledby="btnGroupDrop1">
+                            <a class="dropdown-item" href="#">Other Option</a>
+                            <a class="dropdown-item" href="#">Some Other Option</a>
+                        </div>
+                    </div>
+                    <input class="input-search" type="text" placeholder="Search for Item...">
+                    <button id="search-button" type="submit"><i class="fas fa-search"></i></button>
+                </form>
+            </div>
+            <div class="header-right">
+                <a class="cart" href="#"><i class="fas fa-shopping-cart cart-header"></i></a>
+                <div class="btn-group" role="group">
+                    <button id="btnGroupDrop2" type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">My Account</button>
+                    <div class="dropdown-menu" aria-labelledby="btnGroupDrop1">
+                        <a class="dropdown-item" href="checkout.html">Check Out</a>
+                        <a class="dropdown-item" href="single-page.html">Single Page</a>
+                        <a class="dropdown-item" href="#">Log Out</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <nav class="navigation">
+        <div class="container">
+            <ul class="menu">
+                <li><a href="#" class="menu-link">Home</a></li>
+                <li><a href="#" class="menu-link">Man</a></li>
+                <li><a href="#" class="menu-link">Women</a></li>
+                <li><a href="#" class="menu-link">Kids</a></li>
+                <li><a href="#" class="menu-link">Accoseriese</a></li>
+                <li><a href="#" class="menu-link">Featured</a></li>
+                <li><a href="#" class="menu-link">Hot Deals </a></li>
+            </ul>
+        </div>
+    </nav>
+    <nav class="new-arrivals">
+        <div class="container">
+            <h3 class="new-arrivals-h">New Arrivals</h3>
+            <div>
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a class="breadcrumb-item-a" href="#">Home</a></li>
+                        <li class="breadcrumb-item"><a class="breadcrumb-item-a" href="#">Men</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">New Arrivals</li>
+                    </ol>
+                </nav>
+            </div>
+        </div>
+    </nav>
+    <div class="container">
+        <div class="shipping-details">
+            <details class="details" open>
+                <summary class="summary first">01.&nbsp;&nbsp;&nbsp;Shipping Address</summary>
+                <div class="check-out-info">
+                    <div class="shipping-address">
+                        <h5 class="shipping-address-h5">Check as a guest or register</h5>
+                        <h6 class="shipping-address-h6">Register with us for future convenience</h6>
+                        <div class="guest-check-form">
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1">
+                                <label class="form-check-label" for="exampleRadios1">
+                                    checkout as guest
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2" checked>
+                                <label class="form-check-label" for="exampleRadios2">
+                                    register&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                </label>
+                            </div>
+                        </div>
+                        <h5 class="shipping-address-h5">register and save time!</h5>
+                        <h6 class="shipping-address-h6">Register with us for future convenience</h6>
+                        <h6 class="shipping-address-h6 benefits"><i class="fas fa-angle-double-right"></i> Fast and easy checkout</h6>
+                        <h6 class="shipping-address-h6"><i class="fas fa-angle-double-right"></i> Easy access to your order history and status</h6>
+                        <button class="button-continue">
+                            Continue
+                        </button>
+                    </div>
+                    <div class="shipping-address">
+                        <h5 class="shipping-address-h5">Already registed?</h5>
+                        <h6 class="shipping-address-h6">Please log in below</h6>
+                        <form class="form-login">
+                            <div class="form-group">
+                                <label class="label-login" for="exampleInputEmail1">
+                                    <span class="shipping-address-h5">EMAIL ADDRESS&nbsp;<span class="asterix">&#42;</span></span>
+                                </label>
+                                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter your email" required>
+                            </div>
+                            <div class="form-group">
+                                <label class="label-login" for="exampleInputPassword1">
+                                    <span class="shipping-address-h5">PASSWORD&nbsp;<span class="asterix">&#42;</span></span>
+                                </label>
+                                <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password" required>
+                            </div>
+                            <div class="required-fields">&#42; Required Fields</div>
+                            <button class="button-continue">
+                                Submit
+                            </button>
+                            <a class="forgot-password" href="#">Forgot Password ?</a>
+                        </form>
+                    </div>
+
+                </div>
+            </details>
+            <details class="details">
+                <summary class="summary">02.&nbsp;&nbsp;&nbsp;BILLING INFORMATION</summary>
+                <div class="lorem">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum mollitia optio animi, itaque quibusdam dignissimos error, ipsum fugit nisi voluptate.</div>
+            </details>
+            <details class="details">
+                <summary class="summary">03.&nbsp;&nbsp;&nbsp;SHIPPING INFORMATION</summary>
+                <div class="lorem">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum mollitia optio animi, itaque quibusdam dignissimos error, ipsum fugit nisi voluptate.</div>
+            </details>
+            <details class="details">
+                <summary class="summary">04.&nbsp;&nbsp;&nbsp;SHIPPING METHOD</summary>
+                <div class="lorem">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum mollitia optio animi, itaque quibusdam dignissimos error, ipsum fugit nisi voluptate.</div>
+            </details>
+            <details class="details">
+                <summary class="summary">05.&nbsp;&nbsp;&nbsp;PAYMENT METHOD</summary>
+                <div class="lorem">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum mollitia optio animi, itaque quibusdam dignissimos error, ipsum fugit nisi voluptate.</div>
+            </details>
+            <details class="details">
+                <summary class="summary">06.&nbsp;&nbsp;&nbsp;ORDER REVIEW</summary>
+                <div class="lorem last">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum mollitia optio animi, itaque quibusdam dignissimos error, ipsum fugit nisi voluptate.</div>
+            </details>
+        </div>
+
+    </div>
+
+    <footer>
+        <div class="subscribe">
+            <div class="container">
+                <div class="sub-box">
+                    <div><img class="sub-box-img" src="img/icon-woman.png" alt="icon woman"></div>
+                    <div>
+                        <p class="quote">“Vestibulum quis porttitor dui! Quisque viverra nunc mi, a pulvinar purus condimentum a. Aliquam condimentum mattis neque sed pretium”</p>
+                        <p class="quote-author"><span class="quote-author-span">Bin Burhan</span><br> Dhaka, Bd</p>
+                        <div class="decoration-box">
+                            <div class="decoration-box-lt"></div>
+                            <div class="decoration-box-lt"></div>
+                            <div class="decoration-box-lt"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="sub-box sub-second">
+                    <div class="subscribe-description">
+                        <h3>Subscribe</h3>
+                        <h6>FOR OUR NEWLETTER AND PROMOTION</h6>
+                    </div>
+                    <div class="sub-form">
+                        <form class="form" action="#">
+                            <input class="input-email" type="email" placeholder="Enter Your Email">
+                            <button class="button-subscribe" type="submit">Subscribe</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="info">
+            <div class="container">
+                <div class="info-para">
+                    <a class="logo" href="index.html"><img class="logo-img" src="img/logo.png" alt="logo">BRAN<span class="logo-d">D</span></a>
+                    <p>Objectively transition extensive data rather than cross functional solutions. Monotonectally syndicate multidisciplinary materials before go forward benefits. Intrinsicly syndicate an expanded array of processes and cross-unit partnerships.</p>
+                    <p>Efficiently plagiarize 24/365 action items and focused infomediaries. Distinctively seize superior initiatives for wireless technologies. Dynamically optimize.</p>
+                </div>
+                <div class="info-column">
+                    <h5 class="info-column-h5">COMPANY</h5>
+                    <ul class="info-categories">
+                        <li><a class="info-categories-a" href="#">Home</a></li>
+                        <li><a class="info-categories-a" href="#">Shop</a></li>
+                        <li><a class="info-categories-a" href="#">About</a></li>
+                        <li><a class="info-categories-a" href="#">How It Works</a></li>
+                        <li><a class="info-categories-a" href="#">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="info-column">
+                    <h5 class="info-column-h5">INFORMATION</h5>
+                    <ul class="info-categories">
+                        <li><a class="info-categories-a" href="#">Terms &amp; Conditions</a></li>
+                        <li><a class="info-categories-a" href="#">Privacy Policy</a></li>
+                        <li><a class="info-categories-a" href="#">How to Buy</a></li>
+                        <li><a class="info-categories-a" href="#">How to Sell</a></li>
+                        <li><a class="info-categories-a" href="#">Promotion</a></li>
+                    </ul>
+                </div>
+                <div class="info-column">
+                    <h5 class="info-column-h5">SHOP CATEGORY</h5>
+                    <ul class="info-categories">
+                        <li><a class="info-categories-a" href="#">Men</a></li>
+                        <li><a class="info-categories-a" href="#">Women</a></li>
+                        <li><a class="info-categories-a" href="#">Child</a></li>
+                        <li><a class="info-categories-a" href="#">Apparel</a></li>
+                        <li><a class="info-categories-a" href="#">Browse All</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer">
+            <div class="container">
+                <div class="footer-left">
+                    &copy; 2017 Brand All Rights Reserved.
+                </div>
+                <div class="footer-right">
+                    <div class="icon-social"><a class="icon-social-a" href="#"><i class="fab fa-facebook-f"></i></a></div>
+                    <div class="icon-social"><a class="icon-social-a" href="#"><i class="fab fa-twitter"></i></a></div>
+                    <div class="icon-social no-link"><i class="fab fa-linkedin-in"></i></div>
+                    <div class="icon-social"><a class="icon-social-a" href="#"><i class="fab fa-pinterest"></i></a></div>
+                    <div class="icon-social"><a class="icon-social-a" href="#"><i class="fab fa-google-plus-g"></i></a></div>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
