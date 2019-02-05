@@ -623,7 +623,6 @@ button {
 }
 
 .sub-form {
-    width: 386px;
     height: 46px;
     border-radius: 23px;
     background-color: #e1e1e1;
@@ -636,7 +635,7 @@ button {
     color: white;
     padding: 10px;
     border-style: none;
-    margin-left: 100px;
+    margin-left: 10px;
 }
 
 .button-subscribe:active {
@@ -663,6 +662,7 @@ button {
     border-style: none;
     background-color: #e1e1e1;
     padding: 10px;
+    width: 336px;
 }
 
 .input-email::placeholder {
@@ -1398,6 +1398,7 @@ button {
     display: none;
     flex-direction: row;
     position: absolute;
+    z-index: 1;
     top: 42px;
     left: -4px;
 }
