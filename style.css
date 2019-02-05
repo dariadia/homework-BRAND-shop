@@ -119,6 +119,13 @@ body {
 
 .button:hover {
     cursor: pointer;
+    color: #f16d7f;
+    background-color: white;
+    outline: 2px solid #f16d7f;
+}
+
+.button:hover .arrow {
+    color: #f16d7f;
 }
 
 .navigation {
@@ -142,13 +149,12 @@ body {
 }
 
 .menu-link:hover {
-    color: black;
+    color: #f16d7f;
     text-decoration: none;
-    opacity: 0.5;
 }
 
 .menu-link:active {
-    text-shadow: 0px 2px #f16d7f;
+    text-shadow: 0px 2px grey;
 }
 
 .promo {
@@ -285,6 +291,8 @@ button {
 
 #btnGroupDrop2:hover {
     box-shadow: 0 5px 8px pink;
+    color: #f16d7f;
+    background-color: white;
 }
 
 #search-button:focus {
@@ -638,8 +646,10 @@ button {
 }
 
 .button-subscribe:hover {
-    box-shadow: 0 5px 8px pink;
+    background-color: white;
+    color: #f16d7f;
     cursor: pointer;
+    box-shadow: 0 5px 8px pink;
 }
 
 .input-email:focus {
@@ -708,13 +718,12 @@ button {
 }
 
 .info-categories li:active {
-    text-shadow: 0px 2px #f16d7f;
+    text-shadow: 0px 2px grey;
 }
 
 .info-categories-a:hover {
     text-decoration: none;
-    color: #898989;
-    opacity: 0.7;
+    color: #f16d7f;
 }
 
 .info-column {
@@ -1106,13 +1115,9 @@ button {
     text-shadow: 0px 2px grey;
 }
 
-
-
 .dropdown-item:active {
     background-color: pink!important;
 }
-
-
 
 .container-absolute {
     height: 730px;
@@ -1150,9 +1155,6 @@ button {
     background-color: #f7f7f7;
     height: 730px;
 }
-
-
-
 
 
 .you-may-also-like {
@@ -1320,7 +1322,6 @@ button {
     color: #bcbcbc;
 }
 
-
 #quantity:focus {
     outline: none;
     box-shadow: 0 5px 8px pink;
@@ -1340,8 +1341,148 @@ button {
 
 
 
-
-
 .color-square {
     color: red!important;
 }
+
+.drop-link {
+    color: #646464;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 28px;
+    letter-spacing: 0.35px;
+    text-decoration: none;
+}
+
+.drop-link:active {
+    text-shadow: 0px 2px grey;
+}
+
+.drop-link:hover {
+    text-decoration: none;
+    color: #f16d7f;
+}
+
+.drop-ul {
+    list-style-type: none;
+}
+
+.drop-h3 {
+    color: #232323;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 32px;
+    text-transform: uppercase;
+    letter-spacing: 0.35px;
+    border-bottom: 1px solid #e8e8e8;
+    padding-bottom: 8px;
+    margin-bottom: 8px;
+}
+
+.drop-flex {
+    width: 235px;
+    margin-right: 40px;
+}
+
+.drop-flex:last-of-type {
+    margin-right: 0px;
+}
+
+.drop {
+    border-radius: 5px;
+    background-color: white;
+    padding: 20px;
+    border: 1px solid #ececec;
+    display: none;
+    flex-direction: row;
+    position: absolute;
+    top: 42px;
+    left: -4px;
+}
+
+.drop:after{
+    content: ''; 
+    display: block;
+    width: 10px;
+    height: 10px;
+    background-color: white;
+    position: absolute;
+    left: 30px;
+    top: -6px;
+    transform: rotate(45deg);
+    border-top: 1px solid #e8e8e8;
+    border-left: 1px solid #e8e8e8;
+}
+
+.menu-list {
+    position: relative;
+}
+
+.menu-list:hover .drop {
+    display: flex;
+}
+
+
+
+.second-element {
+    margin-top: 37px;
+}
+
+.super-sale {
+    text-decoration: none;
+    position: relative;    
+}
+
+.super-sale:hover {
+    text-decoration: none;
+}
+
+.super-sale-text {
+    color: #ffffff;
+    font-size: 22px;
+    font-weight: 4700;
+    line-height: 28px;
+    text-transform: uppercase;
+    letter-spacing: 0.55px;
+    position: absolute;
+    left: 174px;
+    top: 10px;
+}
+
+.banner {
+    margin-top: 22px;
+}
+
+.drop-last {
+    left: -500px;
+}
+
+.drop-last:after {
+    left: 550px;
+}
+
+.drop-last-but-one {
+    left: -400px;
+}
+
+.drop-last-but-one:after {
+    left: 450px;
+}
+
+.drop-last-but-last-but-last-one {
+    left: -300px;
+}
+
+.drop-last-but-last-but-last-one:after {
+    left: 350px;
+}
+
+.drop-forth {
+    left: -200px;
+}
+
+.drop-forth:after {
+    left: 224px;
+}
+
+
