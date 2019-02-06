@@ -23,8 +23,30 @@
                             <span class="browse-b">B</span>rowse
                         </button>
                         <div class="dropdown-menu" aria-labelledby="btnGroupDrop1">
-                            <a class="dropdown-item" href="#">Other Option</a>
-                            <a class="dropdown-item" href="#">Some Other Option</a>
+                            <div class="drop-flex drop-browse">
+                                <h3 class="drop-h3">WOMEN</h3>
+                                <ul class="drop-ul">
+                                    <li><a href="#" class="drop-link">Dresses</a></li>
+                                    <li><a href="#" class="drop-link">Sweaters/Knits</a></li>
+                                    <li><a href="#" class="drop-link">Jackets/Coats</a></li>
+                                    <li><a href="#" class="drop-link">Blazers</a></li>
+                                    <li><a href="#" class="drop-link">Denim</a></li>
+                                    <li><a href="#" class="drop-link">Leggings/Pants</a></li>
+                                    <li><a href="#" class="drop-link">Skirts/Shorts</a></li>
+                                    <li><a href="#" class="drop-link">Accessories</a></li>
+                                </ul>
+                            </div>
+                            <div class="drop-flex drop-browse">
+                                <h3 class="drop-h3">MEN</h3>
+                                <ul class="drop-ul">
+                                    <li><a href="#" class="drop-link">Tees/Tank tops</a></li>
+                                    <li><a href="#" class="drop-link">Shirts/Polos</a></li>
+                                    <li><a href="#" class="drop-link">Sweaters</a></li>
+                                    <li><a href="#" class="drop-link">Sweatshirts/Hoodies</a></li>
+                                    <li><a href="#" class="drop-link">Blazers</a></li>
+                                    <li><a href="#" class="drop-link">Jackets/vests</a></li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
                     <input class="input-search" type="text" placeholder="Search for Item...">
@@ -32,7 +54,42 @@
                 </form>
             </div>
             <div class="header-right">
-                <a class="cart" href="shopping-cart.html"><i class="fas fa-shopping-cart cart-header"></i></a>
+                <div class="drop-cart">
+                    <a class="cart" href="shopping-cart.html"><i class="fas fa-shopping-cart cart-header"></i></a>
+                    <div class="drop drop-cart-after">
+                        <div class="drop-flex">
+                            <div class="drop-cart-box">
+                                <a class="drop-cart-box-img" href="single-page.html"><img src="img/cart-item-1.png" alt="this item is in your cart"></a>
+                                <div class="drop-cart-info">
+                                    <h5 class="drop-cart-box-h5">REBOX ZANE</h5>
+                                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                                    <h6 class="drop-cart-box-h6">1 x $250</h6>
+                                </div>
+                                <button class="delete-item"><i class="fas fa-times-circle"></i></button>
+                            </div>
+                            <div class="drop-cart-box drop-cart-box-second">
+                                <a class="drop-cart-box-img" href="single-page.html"><img src="img/cart-item-2.png" alt="this item is in your cart"></a>
+                                <div class="drop-cart-info">
+                                    <h5 class="drop-cart-box-h5">REBOX ZANE</h5>
+                                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                                    <h6 class="drop-cart-box-h6">1 x $250</h6>
+                                </div>
+                                <button class="delete-item"><i class="fas fa-times-circle"></i></button>
+                            </div>
+                            <div class="drop-cart-total">
+                                <h3 class="drop-cart-total-h3">TOTAL</h3>
+                                <h3 class="drop-cart-total-h3">&#36;500.00</h3>
+                            </div>
+                            <button class="button-continue drop-cart-checkout">
+                                Checkout
+                            </button>
+                            <button class="button-continue drop-cart-go-to">
+                                Go&nbsp;to&nbsp;cart
+                            </button>
+
+                        </div>
+                    </div>
+                </div>
                 <div class="btn-group" role="group">
                     <button id="btnGroupDrop2" type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">My Account</button>
                     <div class="dropdown-menu" aria-labelledby="btnGroupDrop1">
@@ -103,7 +160,7 @@
                 </li>
 
                 <li class="menu-list"><a href="#" class="menu-link">Man</a>
-                    <div class="drop">
+                    <div class="drop drop-second">
                         <div class="drop-flex">
                             <h3 class="drop-h3">WOMEN</h3>
                             <ul class="drop-ul">
@@ -156,7 +213,7 @@
                     </div>
                 </li>
                 <li class="menu-list"><a href="#" class="menu-link">Women</a>
-                    <div class="drop">
+                    <div class="drop drop-third">
                         <div class="drop-flex">
                             <h3 class="drop-h3">WOMEN</h3>
                             <ul class="drop-ul">
@@ -437,8 +494,102 @@
             </div>
         </div>
     </nav>
-
-
+    <section class="cart-product-details">
+        <div class="container">
+            <div class="cart-oder-details-header-all">
+                <span class="cart-oder-details-header first-header-el">Product Details</span>
+                <span class="cart-oder-details-header second-header-el">unite Price</span>
+                <span class="cart-oder-details-header second-header-el">Quantity</span>
+                <span class="cart-oder-details-header second-header-el">shipping</span>
+                <span class="cart-oder-details-header">Subtotal</span>
+                <span class="cart-oder-details-header last-header-el">ACTION</span>
+            </div>
+            <article class="cart-oder-details-box">
+                <a class="cart-oder-details-box-a" href="#"><img src="img/shopping-cart-item-1.png" alt=""></a>
+                <div class="cart-oder-details-box-para">
+                    <h3 class="cart-oder-details-box-h3">Mango People T-shirt</h3>
+                    <h6 class="cart-oder-details-box-h6"><span class="bolder">Color:</span> Red</h6>
+                    <h6 class="cart-oder-details-box-h6"><span class="bolder">Size:</span> Xll</h6>
+                </div>
+                <h6 class="cart-oder-details-box-h6 cart-price">&#36;150</h6>
+                <input id="cart-quantity" class="select" type="number" placeholder="2" required>
+                <h6 class="cart-oder-details-box-h6 cart-price">FREE</h6>
+                <h6 class="cart-oder-details-box-h6 cart-price-subtotal">&#36;300</h6>
+                <button class="delete-item shopping-cart-delete"><i class="fas fa-times-circle"></i></button>
+            </article>
+            <article class="cart-oder-details-box">
+                <a class="cart-oder-details-box-a" href="#"><img src="img/shopping-cart-item-2.png" alt=""></a>
+                <div class="cart-oder-details-box-para">
+                    <h3 class="cart-oder-details-box-h3">Mango People T-shirt</h3>
+                    <h6 class="cart-oder-details-box-h6"><span class="bolder">Color:</span> Red</h6>
+                    <h6 class="cart-oder-details-box-h6"><span class="bolder">Size:</span> Xll</h6>
+                </div>
+                <h6 class="cart-oder-details-box-h6 cart-price">&#36;150</h6>
+                <input id="cart-quantity" class="select" type="number" placeholder="2" required>
+                <h6 class="cart-oder-details-box-h6 cart-price">FREE</h6>
+                <h6 class="cart-oder-details-box-h6 cart-price-subtotal">&#36;300</h6>
+                <button class="delete-item shopping-cart-delete"><i class="fas fa-times-circle"></i></button>
+            </article>
+            <article class="cart-oder-details-box">
+                <a class="cart-oder-details-box-a" href="#"><img src="img/shopping-cart-item-3.png" alt=""></a>
+                <div class="cart-oder-details-box-para">
+                    <h3 class="cart-oder-details-box-h3">Mango People T-shirt</h3>
+                    <h6 class="cart-oder-details-box-h6"><span class="bolder">Color:</span> Red</h6>
+                    <h6 class="cart-oder-details-box-h6"><span class="bolder">Size:</span> Xll</h6>
+                </div>
+                <h6 class="cart-oder-details-box-h6 cart-price">&#36;150</h6>
+                <input id="cart-quantity" class="select" type="number" placeholder="2" required>
+                <h6 class="cart-oder-details-box-h6 cart-price">FREE</h6>
+                <h6 class="cart-oder-details-box-h6 cart-price-subtotal">&#36;300</h6>
+                <button class="delete-item shopping-cart-delete"><i class="fas fa-times-circle"></i></button>
+            </article>
+            <div class="flex-buttons">
+                <button class="button-continue flexed-button">
+                    cLEAR SHOPPING CART
+                </button>
+                <button class="button-continue flexed-button">
+                    cONTINUE sHOPPING
+                </button>
+            </div>
+        </div>
+    </section>
+    <div>
+        <div class="container">
+            <div class="cart-shipping-address-flex">
+                <div class="cart-shipping-address">
+                    <h3 class="cart-shipping-address-h3">Shipping Address</h3>
+                    <form class="form-shipping-address">
+                        <select class="select form-control form-shipping-address" id="select-color" required>
+                            <option class="select-option-red" value="red">&nbsp; Bangladesh</option>
+                            <option value="blue">&nbsp; India</option>
+                            <option value="black">&nbsp; Myanmar</option>
+                        </select>
+                        <input type="text" class="form-control form-shipping-address" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="State" required>
+                        <input type="number" class="form-control form-shipping-addressl" id="exampleInputPassword1" placeholder="Postcode / Zip" required>
+                        <button class="button-continue button-get-a-quote">
+                            get a quote
+                        </button>
+                    </form>
+                </div>
+                <div class="cart-shipping-address">
+                    <h3 class="cart-shipping-address-h3">coupon discount</h3>
+                    <h5 class="cart-enter-your-coupon">Enter your coupon code if you have one</h5>
+                    <input type="text" class="form-control form-shipping-address" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Coupon">
+                    <button class="button-continue button-get-a-quote apply">
+                        Apply coupon
+                    </button>
+                </div>
+                <div class="cart-shipping-address address-colored">
+                    <h6 class="address-colored-h6">Sub total&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#36;900</h6>
+                    <h5 class="address-colored-h5">GRAND TOTAL&nbsp;&nbsp;<span class="address-colored-pink">&nbsp;&#36;900</span></h5>
+                    <div class="button-block-decoration"> </div>
+                    <div class="button-block">
+                        <button class="button button-checkout">proceed to checkout</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <footer>
         <div class="subscribe">
