@@ -1319,7 +1319,7 @@ button {
     line-height: 24px;
 }
 
-#cart-quantity {
+.cart-quantity {
     padding-left: 6px;
     text-align: center;
     font-size: 13px;
@@ -1336,7 +1336,7 @@ button {
     color: #bcbcbc;
 }
 
-#cart-quantity::placeholder {
+.cart-quantity::placeholder {
     color: #bcbcbc;
     text-align: center;
 }
@@ -1346,7 +1346,7 @@ button {
     box-shadow: 0 5px 8px pink;
 }
 
-#cart-quantity:focus {
+.cart-quantity:focus {
     outline: none;
     box-shadow: 0 5px 8px pink;
 }
@@ -1355,7 +1355,7 @@ button {
     opacity: 0;
 }
 
-#cart-quantity:focus::placeholder {
+.cart-quantity:focus::placeholder {
     opacity: 0;
 }
 
