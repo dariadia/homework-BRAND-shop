@@ -1293,6 +1293,7 @@ button {
 .cart-header {
     font-size: 28px;
     color: grey;
+    margin-top: 20px;
 }
 
 
@@ -1548,6 +1549,7 @@ button {
 
 .drop-cart {
     position: relative;
+    height: 70px;
 }
 
 .drop-cart:hover .drop {
@@ -1616,6 +1618,15 @@ button {
     font-size: 12px;
     font-weight: 700;
     text-transform: uppercase;
+}
+
+.drop-cart-box-h5:hover {
+    opacity: 0.7;
+    cursor: pointer;
+}
+
+.drop-cart-box-h5:active {
+    text-shadow: 0px 2px pink;
 }
 
 
@@ -1908,4 +1919,7 @@ button {
     height: 1px;
     margin-right: 42px;
     margin-top: 20px;
+}
+.cart-item:hover {
+    text-decoration: none;
 }
