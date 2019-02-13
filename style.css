@@ -60,6 +60,7 @@ body {
     font-weight: 300;
     text-transform: uppercase;
     text-decoration: none;
+    transition: filter 0.2s;
 }
 
 .logo:hover {
@@ -106,6 +107,8 @@ body {
     font-weight: 700;
     letter-spacing: 0.4px;
     text-decoration: none;
+    outline: 2px solid transparent;
+    transition: all 0.2s;
 }
 
 .button:active {
@@ -128,6 +131,10 @@ body {
     color: #f16d7f;
 }
 
+.arrow {
+    transition: color 0.2s;
+    color: white;
+}
 .navigation {
     background-color: #ffffff;
 }
@@ -146,6 +153,7 @@ body {
     font-weight: 700;
     text-transform: uppercase;
     text-decoration: none;
+    transition: color 0.2s;
 }
 
 .menu-link:hover {
@@ -244,6 +252,7 @@ body {
     border-left: 1px solid #e8e8e8;
     color: #a4a4a4;
     font-size: 14px;
+    transition: color 0.2s;
 }
 
 .fa-search:hover {
@@ -268,6 +277,10 @@ button {
     color: #f16d7f;
 }
 
+.cart-header {
+    transition: transform 0.3s;
+}
+
 .cart:active .cart-header {
     text-shadow: 1px 2px grey;
 }
@@ -288,6 +301,7 @@ button {
     border: none;
     border-radius: 0px;
     margin-right: 4px;
+    transition: all 0.2s;
 }
 
 #btnGroupDrop2:hover {
@@ -329,7 +343,6 @@ button {
 }
 
 .featured-items {
-
     background-color: white;
     text-align: center;
     margin-top: 100px;
@@ -371,6 +384,7 @@ button {
     width: 263px;
     position: relative;
     margin-bottom: 39px;
+    transition: transform .3s;
 }
 
 .product:hover .product-add {
@@ -389,23 +403,27 @@ button {
     box-shadow: 0 5px 8px pink;
     text-decoration: none;
     color: white;
+    transform: scale(1.08);
 }
 
 .product-repost:hover {
     box-shadow: 0 5px 8px pink;
     text-decoration: none;
     color: white;
+    transform: scale(1.08);
 }
 
 .product-like:hover {
     box-shadow: 0 5px 8px pink;
     text-decoration: none;
     color: white;
+    transform: scale(1.08);
 }
 
 .product-add:active {
-    opacity: 0.7;
+    opacity: 0.7;  
 }
+
 
 .product-repost:active {
     opacity: 0.7;
@@ -421,11 +439,14 @@ button {
 
 .product:hover {
     box-shadow: 0 5px 8px rgba(0, 0, 0, 0.16);
+    transform: scale(1.08);
 }
 
 .product-img {
     width: 261px;
     height: 279px;
+    filter: brightness(100%);
+    transition: filter 0.2s;
 }
 
 .product-add {
@@ -443,6 +464,7 @@ button {
     justify-content: center;
     align-items: center;
     text-transform: capitalize;
+    transition: transform 0.3s;
 }
 
 .product-repost {
@@ -461,6 +483,7 @@ button {
     justify-content: center;
     align-items: center;
     text-transform: capitalize;
+    transition: transform 0.3s;
 }
 
 .product-like {
@@ -479,6 +502,7 @@ button {
     justify-content: center;
     align-items: center;
     text-transform: capitalize;
+    transition: transform 0.3s;
 }
 
 .product-flex {
@@ -660,6 +684,7 @@ button {
     background-color: #d6d6d6;
 }
 
+
 .decoration-box-lt:nth-child(2) {
     background-color: #f16d7f;
 }
@@ -699,6 +724,7 @@ button {
     padding: 10px;
     border-style: none;
     margin-left: 10px;
+    transition: all 0.2s;
 }
 
 .button-subscribe:active {
@@ -777,6 +803,7 @@ button {
     font-size: 16px;
     font-weight: 400;
     letter-spacing: 0.4px;
+    transition: color 0.2s;
 }
 
 .info-categories li {
@@ -832,6 +859,7 @@ button {
     height: 32px;
     background-color: #ffffff;
     margin-left: 8px;
+    transition: background-color 0.3s;
 }
 
 .icon-social:active {
@@ -848,6 +876,7 @@ button {
 
 .fab {
     color: #b2b2b2;
+    transition: color 0.3s;
 }
 
 .icon-social .fab:hover {
@@ -891,6 +920,12 @@ button {
     text-transform: uppercase;
     color: #636363;
     font-weight: 300;
+    transition: transform 0.2s;
+    height: 35px;
+}
+
+.breadcrumb-item:hover {
+    transform: translate(0px, -10px);
 }
 
 .breadcrumb-item-a {
@@ -928,6 +963,10 @@ button {
 .active {
     font-weight: 700;
     color: #f16d7f!important;
+}
+
+.active:hover {
+    transform: translate(0px, 0px);
 }
 
 .shipping-address {
@@ -973,6 +1012,7 @@ button {
     padding-bottom: 33px;
     padding-top: 33px;
     border-top: 1px solid #e8e8e8;
+    transition: color 0.2s;
 }
 
 .summary::-webkit-details-marker {
@@ -1086,6 +1126,7 @@ button {
     padding-left: 54px;
     padding-right: 54px;
     text-align: center;
+    transition: all 0.2s;
 }
 
 .view-all {
@@ -1181,17 +1222,22 @@ button {
 
 .fa-arrow-right {
     opacity: 0;
+    transition: transform 1s;
 }
 
 .arrow:hover .fa-arrow-right {
     opacity: 1;
+    transform: rotate(360deg);
 }
 
 .offer-img:hover {
     filter: brightness(60%);
 }
 
-
+.offer-img {
+    filter: brightness(100%);
+    transition: filter 0.2s;
+}
 
 .form-group {
     margin-right: 4px;
@@ -1204,6 +1250,7 @@ button {
     line-height: 20px;
     margin-left: 29px;
     text-decoration: none;
+    transition: color 0.3s;
 }
 
 .forgot-password:hover {
@@ -1396,7 +1443,7 @@ button {
 .cart-header {
     font-size: 28px;
     color: grey;
-    margin-top: 20px;
+    margin-top: 15px;
 }
 
 
@@ -1463,16 +1510,6 @@ button {
     opacity: 0;
 }
 
-
-
-
-
-
-
-
-
-
-
 .color-square {
     color: red!important;
 }
@@ -1484,6 +1521,7 @@ button {
     line-height: 28px;
     letter-spacing: 0.35px;
     text-decoration: none;
+    transition: color 0.2s;
 }
 
 .drop-link:active {
@@ -1565,13 +1603,91 @@ button {
     text-decoration: none;
     position: relative;
     height: 118px;
+    transition: filter 0.3s;
 }
+
+.jello-horizontal {
+	-webkit-animation: jello-horizontal 0.9s 2s both;
+	        animation: jello-horizontal 0.9s 2s oth;
+}
+
+/* ----------------------------------------------
+ * Generated by Animista on 2019-2-12 18:9:26
+ * w: http://animista.net, t: @cssanimista
+ * ---------------------------------------------- */
+
+/**
+ * ----------------------------------------
+ * animation jello-horizontal
+ * ----------------------------------------
+ */
+@-webkit-keyframes jello-horizontal {
+  0% {
+    -webkit-transform: scale3d(1, 1, 1);
+            transform: scale3d(1, 1, 1);
+  }
+  30% {
+    -webkit-transform: scale3d(1.25, 0.75, 1);
+            transform: scale3d(1.25, 0.75, 1);
+  }
+  40% {
+    -webkit-transform: scale3d(0.75, 1.25, 1);
+            transform: scale3d(0.75, 1.25, 1);
+  }
+  50% {
+    -webkit-transform: scale3d(1.15, 0.85, 1);
+            transform: scale3d(1.15, 0.85, 1);
+  }
+  65% {
+    -webkit-transform: scale3d(0.95, 1.05, 1);
+            transform: scale3d(0.95, 1.05, 1);
+  }
+  75% {
+    -webkit-transform: scale3d(1.05, 0.95, 1);
+            transform: scale3d(1.05, 0.95, 1);
+  }
+  100% {
+    -webkit-transform: scale3d(1, 1, 1);
+            transform: scale3d(1, 1, 1);
+  }
+}
+@keyframes jello-horizontal {
+  0% {
+    -webkit-transform: scale3d(1, 1, 1);
+            transform: scale3d(1, 1, 1);
+  }
+  30% {
+    -webkit-transform: scale3d(1.25, 0.75, 1);
+            transform: scale3d(1.25, 0.75, 1);
+  }
+  40% {
+    -webkit-transform: scale3d(0.75, 1.25, 1);
+            transform: scale3d(0.75, 1.25, 1);
+  }
+  50% {
+    -webkit-transform: scale3d(1.15, 0.85, 1);
+            transform: scale3d(1.15, 0.85, 1);
+  }
+  65% {
+    -webkit-transform: scale3d(0.95, 1.05, 1);
+            transform: scale3d(0.95, 1.05, 1);
+  }
+  75% {
+    -webkit-transform: scale3d(1.05, 0.95, 1);
+            transform: scale3d(1.05, 0.95, 1);
+  }
+  100% {
+    -webkit-transform: scale3d(1, 1, 1);
+            transform: scale3d(1, 1, 1);
+  }
+}
+
 
 
 
 .super-sale:hover {
     text-decoration: none;
-    filter:drop-shadow(8px 8px 10px pink);
+    filter: drop-shadow(8px 8px 10px pink);
 }
 
 .super-sale:active {
@@ -1626,33 +1742,24 @@ button {
     left: 224px;
 }
 
-
-
-
-
 .option-select-red {
     width: 12px;
     height: 12px;
     background-color: #ef5b70;
 }
 
-
-
-
-
-
-
-
-
 .drop-browse {
     margin-left: 20px;
 }
 
-
-
 .drop-cart {
     position: relative;
-    height: 70px;
+    height: 60px;
+}
+
+.drop-cart:hover .cart-header {
+    transform: scale(1.2);
+    color: #f16d7f;
 }
 
 .drop-cart:hover .drop {
@@ -1721,6 +1828,7 @@ button {
     font-size: 12px;
     font-weight: 700;
     text-transform: uppercase;
+    transition: opacity 0.2s;
 }
 
 .drop-cart-box-h5:hover {
@@ -1739,6 +1847,7 @@ button {
 .drop-cart-box-img {
     margin-right: 14px;
     margin-bottom: 16px;
+    transition: opacity 0.2s;
 }
 
 .drop-cart-box-img :hover {
@@ -1763,6 +1872,7 @@ button {
     color: grey;
     padding: 7px;
     margin-left: 35px;
+    transition: color 0.2s;
 }
 
 .fa-times-circle:hover {
@@ -1832,7 +1942,11 @@ button {
 
 .cart-oder-details-box-a:hover {
     text-decoration: none;
-    opacity: 0.7;
+    transform: scale(1.2);
+}
+
+.cart-oder-details-box-a {
+    transition: transform 0.2s;
 }
 
 .cart-oder-details-box-a:active {
@@ -1965,9 +2079,6 @@ button {
     margin-right: 35px;
 }
 
-
-
-
 .cart-enter-your-coupon {
     color: #000000;
     font-size: 14px;
@@ -1975,8 +2086,6 @@ button {
     margin-top: 4px;
     margin-bottom: 24px;
 }
-
-
 
 .apply {
     margin-top: 5px!important;
@@ -2084,8 +2193,6 @@ button {
 .aside-summary:focus .fa-caret-down {
     opacity: 1;
 }
-
-
 
 .aside-summary::-webkit-details-marker {
   display: none;
@@ -2209,14 +2316,10 @@ button {
     font-weight: 400;
     line-height: 26px;
     text-transform: uppercase;
+    margin-left: 20px;
 }
 
-.checkbox-size {
-    width: 13px;
-    height: 13px;
-    border: 1px solid #ebebeb;
-    background-color: #ffffff;
-}
+
 
 .slidecontainer {
   width: 100%;
@@ -2303,8 +2406,6 @@ button {
     border-right: 1px solid #ebebeb;
 }
 
-
-
 .button-rec-box {
     color: #6f6e6e!important;
     font-size: 14px!important;
@@ -2317,10 +2418,6 @@ button {
 .name {
     margin-right: 21px;
 }
-
-
-
-
 
 .name-second {
     margin-right: 15px;
@@ -2337,12 +2434,6 @@ button {
     margin-right: 1px;
     margin-left: 10px;
 }
-
-
-
-
-
-
 
 .page-link {
     height: 44px;
@@ -2367,4 +2458,84 @@ button {
 
 .pagination {
     margin-bottom: 0px;
+}
+
+
+.checkbox-label {
+    display: block;
+    position: relative;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    margin-right: 12px;
+}
+
+/* Hide the browser's default checkbox */
+.checkbox-label input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+/* Create a custom checkbox */
+.checkmark {
+    position: absolute;
+    top: 6px;
+    left: 0;
+    width: 13px;
+    height: 13px;
+    border: 1px solid #ebebeb;
+    background-color: #ffffff;
+}
+
+/* On mouse-over, add a grey background color */
+.checkbox-label:hover input ~ .checkmark {
+  background-color: #ccc;
+}
+
+/* When the checkbox is checked, add a blue background */
+.checkbox-label input:checked ~ .checkmark {
+  background-color: pink;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the checkmark when checked */
+.checkbox-label input:checked ~ .checkmark:after {
+  display: block;
+}
+
+/* Style the checkmark/indicator */
+.checkbox-label .checkmark:after {
+  left: 4px;
+  top: -2px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.form-flex {
+    display: flex;
+    justify-content: space-between;
+}
+
+.row-2 {
+    width: 190px;
+}
+
+.row-1 {
+        width: 220px;
 }
