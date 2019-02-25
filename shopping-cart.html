@@ -449,84 +449,101 @@
                     </div>
                 </div>
             </nav>
-            <div class="container">
-                <div class="shipping-details">
-                    <details class="details" open>
-                        <summary class="summary first">01.&nbsp;&nbsp;&nbsp;Shipping Address</summary>
-                        <div class="check-out-info">
-                            <div class="shipping-address">
-                                <h5 class="shipping-address-h5">Check as a guest or register</h5>
-                                <h6 class="shipping-address-h6">Register with us for future convenience</h6>
-                                <div class="guest-check-form">
-                                    <div class="form-check">
-                                        <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1">
-                                        <label class="form-check-label" for="exampleRadios1">
-                                            checkout as guest
-                                        </label>
-                                    </div>
-                                    <div class="form-check">
-                                        <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2" checked>
-                                        <label class="form-check-label" for="exampleRadios2">
-                                            register&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                        </label>
-                                    </div>
-                                </div>
-                                <h5 class="shipping-address-h5">register and save time!</h5>
-                                <h6 class="shipping-address-h6">Register with us for future convenience</h6>
-                                <h6 class="shipping-address-h6 benefits"><i class="fas fa-angle-double-right"></i> Fast and easy checkout</h6>
-                                <h6 class="shipping-address-h6"><i class="fas fa-angle-double-right"></i> Easy access to your order history and status</h6>
-                                <button class="button_continue">
-                                    Continue
-                                </button>
-                            </div>
-                            <div class="shipping-address">
-                                <h5 class="shipping-address-h5">Already registed?</h5>
-                                <h6 class="shipping-address-h6">Please log in below</h6>
-                                <form class="form-login">
-                                    <div class="form-group">
-                                        <label class="label-login" for="exampleInputEmail1">
-                                            <span class="shipping-address-h5">EMAIL ADDRESS&nbsp;<span class="asterix">&#42;</span></span>
-                                        </label>
-                                        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter your email" required>
-                                    </div>
-                                    <div class="form-group">
-                                        <label class="label-login" for="exampleInputPassword1">
-                                            <span class="shipping-address-h5">PASSWORD&nbsp;<span class="asterix">&#42;</span></span>
-                                        </label>
-                                        <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password" required>
-                                    </div>
-                                    <div class="required-fields">&#42; Required Fields</div>
-                                    <button class="button_continue">
-                                        Submit
-                                    </button>
-                                    <a class="forgot-password" href="#">Forgot Password ?</a>
-                                </form>
-                            </div>
-
+            <section class="cart-product-details">
+                <div class="container">
+                    <div class="cart-oder-details-header-all">
+                        <span class="cart-oder-details-header first-header-el">Product Details</span>
+                        <span class="cart-oder-details-header second-header-el">unite Price</span>
+                        <span class="cart-oder-details-header second-header-el">Quantity</span>
+                        <span class="cart-oder-details-header second-header-el">shipping</span>
+                        <span class="cart-oder-details-header">Subtotal</span>
+                        <span class="cart-oder-details-header last-header-el">ACTION</span>
+                    </div>
+                    <article class="cart-oder-details-box">
+                        <a class="cart-oder-details-box-a" href="#"><img src="img/shopping-cart-item-1.png" alt=""></a>
+                        <div class="cart-oder-details-box-para">
+                            <h3 class="cart-oder-details-box-h3">Mango People T-shirt</h3>
+                            <h6 class="cart-oder-details-box-h6"><span class="bolder">Color:</span> Red</h6>
+                            <h6 class="cart-oder-details-box-h6"><span class="bolder">Size:</span> Xll</h6>
                         </div>
-                    </details>
-                    <details class="details">
-                        <summary class="summary">02.&nbsp;&nbsp;&nbsp;BILLING INFORMATION</summary>
-                        <div class="lorem">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum mollitia optio animi, itaque quibusdam dignissimos error, ipsum fugit nisi voluptate.</div>
-                    </details>
-                    <details class="details">
-                        <summary class="summary">03.&nbsp;&nbsp;&nbsp;SHIPPING INFORMATION</summary>
-                        <div class="lorem">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum mollitia optio animi, itaque quibusdam dignissimos error, ipsum fugit nisi voluptate.</div>
-                    </details>
-                    <details class="details">
-                        <summary class="summary">04.&nbsp;&nbsp;&nbsp;SHIPPING METHOD</summary>
-                        <div class="lorem">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum mollitia optio animi, itaque quibusdam dignissimos error, ipsum fugit nisi voluptate.</div>
-                    </details>
-                    <details class="details">
-                        <summary class="summary">05.&nbsp;&nbsp;&nbsp;PAYMENT METHOD</summary>
-                        <div class="lorem">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum mollitia optio animi, itaque quibusdam dignissimos error, ipsum fugit nisi voluptate.</div>
-                    </details>
-                    <details class="details">
-                        <summary class="summary">06.&nbsp;&nbsp;&nbsp;ORDER REVIEW</summary>
-                        <div class="lorem last">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum mollitia optio animi, itaque quibusdam dignissimos error, ipsum fugit nisi voluptate.</div>
-                    </details>
+                        <h6 class="cart-oder-details-box-h6 cart-price">&#36;150</h6>
+                        <input class="cart-quantity select" type="number" placeholder="2" required>
+                        <h6 class="cart-oder-details-box-h6 cart-price">FREE</h6>
+                        <h6 class="cart-oder-details-box-h6 cart-price-subtotal">&#36;300</h6>
+                        <button class="button_delete-item shopping-cart-delete"><i class="fas fa-times-circle"></i></button>
+                    </article>
+                    <article class="cart-oder-details-box">
+                        <a class="cart-oder-details-box-a" href="#"><img src="img/shopping-cart-item-2.png" alt=""></a>
+                        <div class="cart-oder-details-box-para">
+                            <h3 class="cart-oder-details-box-h3">Mango People T-shirt</h3>
+                            <h6 class="cart-oder-details-box-h6"><span class="bolder">Color:</span> Red</h6>
+                            <h6 class="cart-oder-details-box-h6"><span class="bolder">Size:</span> Xll</h6>
+                        </div>
+                        <h6 class="cart-oder-details-box-h6 cart-price">&#36;150</h6>
+                        <input class="cart-quantity select" type="number" placeholder="2" required>
+                        <h6 class="cart-oder-details-box-h6 cart-price">FREE</h6>
+                        <h6 class="cart-oder-details-box-h6 cart-price-subtotal">&#36;300</h6>
+                        <button class="button_delete-item shopping-cart-delete"><i class="fas fa-times-circle"></i></button>
+                    </article>
+                    <article class="cart-oder-details-box">
+                        <a class="cart-oder-details-box-a" href="#"><img src="img/shopping-cart-item-3.png" alt=""></a>
+                        <div class="cart-oder-details-box-para">
+                            <h3 class="cart-oder-details-box-h3">Mango People T-shirt</h3>
+                            <h6 class="cart-oder-details-box-h6"><span class="bolder">Color:</span> Red</h6>
+                            <h6 class="cart-oder-details-box-h6"><span class="bolder">Size:</span> Xll</h6>
+                        </div>
+                        <h6 class="cart-oder-details-box-h6 cart-price">&#36;150</h6>
+                        <input class="cart-quantity select" type="number" placeholder="2" required>
+                        <h6 class="cart-oder-details-box-h6 cart-price">FREE</h6>
+                        <h6 class="cart-oder-details-box-h6 cart-price-subtotal">&#36;300</h6>
+                        <button class="button_delete-item shopping-cart-delete"><i class="fas fa-times-circle"></i></button>
+                    </article>
+                    <div class="flex-buttons">
+                        <button class="button_continue flexed-button">
+                            cLEAR SHOPPING CART
+                        </button>
+                        <button class="button_continue flexed-button">
+                            cONTINUE sHOPPING
+                        </button>
+                    </div>
                 </div>
-
+            </section>
+            <div>
+                <div class="container">
+                    <div class="cart-shipping-address-flex">
+                        <div class="cart-shipping-address">
+                            <h3 class="cart-shipping-address-h3">Shipping Address</h3>
+                            <form class="form-shipping-address">
+                                <select class="select form-control form-shipping-address" id="select-color">
+                                    <option value="state">&nbsp; Bangladesh</option>
+                                    <option value="state">&nbsp; India</option>
+                                    <option value="state">&nbsp; Myanmar</option>
+                                </select>
+                                <input type="text" class="form-control form-shipping-address" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="State" required>
+                                <input type="number" class="form-control form-shipping-addressl" id="exampleInputPassword1" placeholder="Postcode / Zip" required>
+                                <button class="button_continue button-get-a-quote">
+                                    get a quote
+                                </button>
+                            </form>
+                        </div>
+                        <div class="cart-shipping-address">
+                            <h3 class="cart-shipping-address-h3">coupon discount</h3>
+                            <h5 class="cart-enter-your-coupon">Enter your coupon code if you have one</h5>
+                            <input type="text" class="form-control form-shipping-address" id="exampleInputEmail2" aria-describedby="emailHelp" placeholder="Coupon">
+                            <button class="button_continue button-get-a-quote apply">
+                                Apply coupon
+                            </button>
+                        </div>
+                        <div class="cart-shipping-address address-colored">
+                            <h6 class="address-colored-h6">Sub total&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#36;900</h6>
+                            <h5 class="address-colored-h5">GRAND TOTAL&nbsp;&nbsp;<span class="address-colored-pink">&nbsp;&#36;900</span></h5>
+                            <div class="button-block-decoration"> </div>
+                            <div class="button-block">
+                                <button class="button button_checkout">proceed to checkout</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
         <footer>
