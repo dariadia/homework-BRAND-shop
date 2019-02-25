@@ -5,6 +5,21 @@
     padding: 0;
 }
 
+html,
+body {
+    height: 100%;
+}
+
+.container_top {
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.top {
+    flex-grow: 1;
+}
+
 body {
     font-family: 'Lato', sans-serif;
 }
@@ -1683,9 +1698,6 @@ button {
   }
 }
 
-
-
-
 .super-sale:hover {
     text-decoration: none;
     filter: drop-shadow(8px 8px 10px pink);
@@ -1698,7 +1710,7 @@ button {
 .super-sale-text {
     color: #ffffff;
     font-size: 22px;
-    font-weight: 4700;
+    font-weight: 700;
     line-height: 28px;
     text-transform: uppercase;
     letter-spacing: 0.55px;
