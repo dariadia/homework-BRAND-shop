@@ -1238,12 +1238,11 @@ button {
 
 .fa-arrow-right {
     opacity: 0;
-    transition: transform 1s;
+    transition: opacity 0.2s;
 }
 
 .arrow:hover .fa-arrow-right {
     opacity: 1;
-    transform: rotate(360deg);
 }
 
 .offer-img:hover {
