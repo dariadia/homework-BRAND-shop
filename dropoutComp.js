@@ -1,3 +1,15 @@
+Vue.component('upper-menu', {
+    template: ` <ul class="menu">
+    <li class="menu-list"><a href="index.html" class="menu-link">Home</a></li>
+    <dropout title="MEN"></dropout>
+                        <dropout title="WOMEN"></dropout>
+                        <dropout title="KIDS"></dropout>
+                        <dropout title="ACCOSERIESE"></dropout>
+                        <dropout title="FEATURED"></dropout>
+                        <dropout title="HOT DEALS"></dropout></ul>`
+});
+
+
 Vue.component('dropout', {
     data(){ 
         return {
