@@ -10,11 +10,12 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
     <script src="jquery-3.3.1.min.js"></script>
+
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
 </head>
 
 <body>
-    <div class="container_top">
+    <div id="app" class="container_top">
         <div class="top">
             <header class="header">
                 <div class="container header-flex">
@@ -632,6 +633,8 @@
         </footer>
     </div>
 
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="dropoutComp.js"></script>
     <script src="main.js"></script>
     
     <!-- пока страница грузится, пользователь видит черный экран и крутящийся квадратик --> 
@@ -644,6 +647,7 @@
           $(".loader-wrapper").fadeOut("slow");
         });
     </script>
+
 </body>
 
 </html>

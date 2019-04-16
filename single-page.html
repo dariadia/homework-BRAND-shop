@@ -14,7 +14,7 @@
 </head>
 
 <body>
-    <div class="container_top">
+    <div id="app" class="container_top">
         <div class="top">
             <header class="header">
 
@@ -645,7 +645,9 @@
         </footer>
     </div>
 
-    <script src="main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script src="dropoutComp.js"></script>
+<script src="main.js"></script>
     
     <!-- пока страница грузится, пользователь видит черный экран и крутящийся квадратик --> 
     <div class="loader-wrapper">
@@ -657,6 +659,7 @@
           $(".loader-wrapper").fadeOut("slow");
         });
     </script>
+  
 </body>
 
 </html>
