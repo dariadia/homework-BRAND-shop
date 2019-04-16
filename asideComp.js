@@ -30,7 +30,7 @@ Vue.component('aside-details-li', {
     props: ['title'],
     data(){ 
         return {
-            titles: ['Accessories', 'Bags', 'Denim', 'Hoodies &amp; Sweatshirts', 'Jackets &amp; Coats', 'Pants', 'Polos', 'Shirts', 'Shoes', 'Shorts', 'Sweaters &amp; Knits', 'T-Shirts', 'Tanks'],
+            titles: ['Accessories', 'Bags', 'Denim', 'Hoodies & Sweatshirts', 'Jackets & Coats', 'Pants', 'Polos', 'Shirts', 'Shoes', 'Shorts', 'Sweaters & Knits', 'T-Shirts', 'Tanks'],
         }
     },
 template: ` <ul class="aside-summary-list">
