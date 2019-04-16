@@ -2196,15 +2196,10 @@ button {
 
 .aside-summary:focus {
     outline: none;
-    color: #6f6e6e;
 }
 
-.aside-summary:focus .fa-caret-up {
-    display: none;
-}
-
-.aside-summary:focus .fa-caret-down {
-    opacity: 1;
+.aside-summary:hover {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.17);
 }
 
 .aside-summary::-webkit-details-marker {
@@ -2267,12 +2262,7 @@ button {
     top: 14px;
     left: 170px;
     color: #6f6e6e;
-    opacity: 0;
 }
-
-
-
-
 
 .products-flex {
     width: 846px;

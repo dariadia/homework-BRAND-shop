@@ -11,11 +11,11 @@ Vue.component('upper-menu', {
 
 
 Vue.component('dropout', {
-    data(){ 
-        return {
-            menuOptions: ['HOME', 'MEN', 'WOMEN','KIDS','ACCOSERIESE','FEATURED','HOT DEALS'],
-        }
-    },
+    // data(){ 
+    //     return {
+    //         menuOptions: ['HOME', 'MEN', 'WOMEN','KIDS','ACCOSERIESE','FEATURED','HOT DEALS'],
+    //     }
+    // },
     props: ['title'],
    // mounted(){},
    // methods: {},
