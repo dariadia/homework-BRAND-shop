@@ -21,21 +21,19 @@ template: `<details class="aside-details">
                         <i v-else class="fas fa-caret-down"></i>
                         </summary>
                         <ul class="aside-summary-list">
-                            <li class="aside-summary-li"><a href="#" class="aside-category">Accessories</a></li>
-                            <li class="aside-summary-li"><a href="#" class="aside-category">Bags</a></li>
-                            <li class="aside-summary-li"><a href="#" class="aside-category">Denim</a></li>
-                            <li class="aside-summary-li"><a href="#" class="aside-category">Hoodies &amp;
-                                    Sweatshirts</a></li>
-                            <li class="aside-summary-li"><a href="#" class="aside-category">Jackets &amp; Coats</a></li>
-                            <li class="aside-summary-li"><a href="#" class="aside-category">Pants</a></li>
-                            <li class="aside-summary-li"><a href="#" class="aside-category">Polos</a></li>
-                            <li class="aside-summary-li"><a href="#" class="aside-category">Shirts</a></li>
-                            <li class="aside-summary-li"><a href="#" class="aside-category">Shoes</a></li>
-                            <li class="aside-summary-li"><a href="#" class="aside-category">Shorts</a></li>
-                            <li class="aside-summary-li"><a href="#" class="aside-category">Sweaters &amp; Knits</a>
-                            </li>
-                            <li class="aside-summary-li"><a href="#" class="aside-category">T-Shirts</a></li>
-                            <li class="aside-summary-li"><a href="#" class="aside-category">Tanks</a></li>
+                            <aside-details-li></aside-details-li>
                         </ul>
                     </details>`
+});
+
+Vue.component('aside-details-li', {
+    props: ['title'],
+    data(){ 
+        return {
+            titles: ['Accessories', 'Bags', 'Denim', 'Hoodies &amp; Sweatshirts', 'Jackets &amp; Coats', 'Pants', 'Polos', 'Shirts', 'Shoes', 'Shorts', 'Sweaters &amp; Knits', 'T-Shirts', 'Tanks'],
+        }
+    },
+template: ` <ul class="aside-summary-list">
+                            <li v-for="item in titles" class="aside-summary-li"><a href="#" class="aside-category">{{item}}</a></li>      
+                        </ul>`
 });
