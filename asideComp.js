@@ -16,14 +16,12 @@ Vue.component('aside-details', {
         }
     },
 template: `<details class="aside-details">
-                        <summary class="aside-summary" @click="isClosed = !isClosed"> {{title}}
-                        <i v-if="isClosed" class="fas fa-caret-up"></i>
-                        <i v-else class="fas fa-caret-down"></i>
-                        </summary>
-                        <ul class="aside-summary-list">
-                            <aside-details-li></aside-details-li>
-                        </ul>
-                    </details>`
+                <summary class="aside-summary" @click="isClosed = !isClosed"> {{title}}
+                    <i v-if="isClosed" class="fas fa-caret-up"></i>
+                    <i v-else class="fas fa-caret-down"></i>
+                </summary>
+                <aside-details-li></aside-details-li> 
+            </details>`
 });
 
 Vue.component('aside-details-li', {
@@ -34,6 +32,6 @@ Vue.component('aside-details-li', {
         }
     },
 template: ` <ul class="aside-summary-list">
-                            <li v-for="item in titles" class="aside-summary-li"><a href="#" class="aside-category">{{item}}</a></li>      
-                        </ul>`
+                 <li v-for="item in titles" class="aside-summary-li"><a href="#" class="aside-category">{{item}}</a></li>      
+            </ul>`
 });
