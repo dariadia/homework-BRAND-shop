@@ -25,32 +25,7 @@
                                 <button id="btnGroupDrop1" type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                     <span class="browse-b">B</span>rowse
                                 </button>
-                                <div class="dropdown-menu" aria-labelledby="btnGroupDrop1">
-                                    <div class="drop-flex drop-browse">
-                                        <h3 class="drop-h3">WOMEN</h3>
-                                        <ul class="drop-ul">
-                                            <li><a href="#" class="drop-link">Dresses</a></li>
-                                            <li><a href="#" class="drop-link">Sweaters/Knits</a></li>
-                                            <li><a href="#" class="drop-link">Jackets/Coats</a></li>
-                                            <li><a href="#" class="drop-link">Blazers</a></li>
-                                            <li><a href="#" class="drop-link">Denim</a></li>
-                                            <li><a href="#" class="drop-link">Leggings/Pants</a></li>
-                                            <li><a href="#" class="drop-link">Skirts/Shorts</a></li>
-                                            <li><a href="#" class="drop-link">Accessories</a></li>
-                                        </ul>
-                                    </div>
-                                    <div class="drop-flex drop-browse">
-                                        <h3 class="drop-h3">MEN</h3>
-                                        <ul class="drop-ul">
-                                            <li><a href="#" class="drop-link">Tees/Tank tops</a></li>
-                                            <li><a href="#" class="drop-link">Shirts/Polos</a></li>
-                                            <li><a href="#" class="drop-link">Sweaters</a></li>
-                                            <li><a href="#" class="drop-link">Sweatshirts/Hoodies</a></li>
-                                            <li><a href="#" class="drop-link">Blazers</a></li>
-                                            <li><a href="#" class="drop-link">Jackets/vests</a></li>
-                                        </ul>
-                                    </div>
-                                </div>
+                                <drop-down-menu></drop-down-menu>
                             </div>
                             <input class="input-search" type="text" placeholder="Search for Item...">
                             <button id="search-button" type="submit"><i class="fas fa-search"></i></button>
@@ -296,6 +271,7 @@
 
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
     <script src="dropoutComp.js"></script>
+    <script src="dropdownMenu.js"></script>
     <script src="main.js"></script>
     
     <!-- пока страница грузится, пользователь видит черный экран и крутящийся квадратик --> 

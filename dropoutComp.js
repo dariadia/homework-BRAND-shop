@@ -22,19 +22,9 @@ Vue.component('dropout', {
     template: `<li class="menu-list"><a href="product.html" class="menu-link">{{title}}</a>
     <div class="drop drop-second">
         <dropout-lg-ul></dropout-lg-ul>
-        <div>
-        <dropout-ul></dropout-ul>
-            <div class="drop-flex second-element">
-                <h3 class="drop-h3">WOMEN</h3>
-                <ul class="drop-ul">
-                    <li><a href="#" class="drop-link">Dresses</a></li>
-                    <li><a href="#" class="drop-link">Tops</a></li>
-                    <li><a href="#" class="drop-link">Sweaters/Knits</a></li>
-                </ul>
-            </div>
-        </div>
-        <div>
-                <dropout-ul></dropout-ul>
+        <div><dropout-ul></dropout-ul>
+        <dropout-ul class="second element"></dropout-ul></div>
+        <div><dropout-ul></dropout-ul>
             <div class="second-element jello-horizontal"><a class="super-sale" href="#"><img src="img/super-sale.png" alt="super sale banner">
                     <h3 class="super-sale-text">SUPER SALE</h3>
                 </a></div>
