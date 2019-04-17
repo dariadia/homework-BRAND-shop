@@ -73,16 +73,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="btn-group" role="group">
-                            <button id="btnGroupDrop2" type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">My Account</button>
-                            <div class="dropdown-menu" aria-labelledby="btnGroupDrop1">
-                                <a class="dropdown-item" href="checkout.html">Check Out</a>
-                                <a class="dropdown-item" href="single-page.html">Single Page</a>
-                                <a class="dropdown-item" href="product.html">Products</a>
-                                <a class="dropdown-item" href="shopping-cart.html">Shopping Cart</a>
-                                <a class="dropdown-item" href="#">Log Out</a>
-                            </div>
-                        </div>
+                        <account-button></account-button>
                     </div>
                 </div>
             </header>
@@ -214,94 +205,13 @@
             </div>
         </div>
 
-        <footer>
-            <div class="subscribe">
-                <div class="container">
-                    <div class="sub-box">
-                        <div><img class="sub-box-img" src="img/icon-woman.png" alt="icon woman"></div>
-                        <div>
-                            <p class="quote">“Vestibulum quis porttitor dui! Quisque viverra nunc mi, a pulvinar purus condimentum a. Aliquam condimentum mattis neque sed pretium”</p>
-                            <p class="quote-author"><span class="quote-author-span">Bin Burhan</span><br> Dhaka, Bd</p>
-                            <div class="decoration-box">
-                                <div class="decoration-box-lt"></div>
-                                <div class="decoration-box-lt"></div>
-                                <div class="decoration-box-lt"></div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="sub-box sub-second">
-                        <div class="subscribe-description">
-                            <h3>Subscribe</h3>
-                            <h6>FOR OUR NEWLETTER AND PROMOTION</h6>
-                        </div>
-                        <div class="sub-form">
-                            <form class="form" action="#">
-                                <input class="input_email" type="email" placeholder="Enter Your Email">
-                                <button class="button_subscribe" type="submit">Subscribe</button>
-                            </form>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="info">
-                <div class="container">
-                    <div class="info-para">
-                        <a class="logo" href="index.html"><img class="logo-img" src="img/logo.png" alt="logo">BRAN<span class="logo-d">D</span></a>
-                        <p>Objectively transition extensive data rather than cross functional solutions. Monotonectally syndicate multidisciplinary materials before go forward benefits. Intrinsicly syndicate an expanded array of processes and cross-unit partnerships.</p>
-                        <p>Efficiently plagiarize 24/365 action items and focused infomediaries. Distinctively seize superior initiatives for wireless technologies. Dynamically optimize.</p>
-                    </div>
-                    <div class="info-column">
-                        <h5 class="info-column-h5">COMPANY</h5>
-                        <ul class="info-categories">
-                            <li><a class="info-categories-a" href="index.html">Home</a></li>
-                            <li><a class="info-categories-a" href="#">Shop</a></li>
-                            <li><a class="info-categories-a" href="#">About</a></li>
-                            <li><a class="info-categories-a" href="#">How It Works</a></li>
-                            <li><a class="info-categories-a" href="#">Contact</a></li>
-                        </ul>
-                    </div>
-                    <div class="info-column">
-                        <h5 class="info-column-h5">INFORMATION</h5>
-                        <ul class="info-categories">
-                            <li><a class="info-categories-a" href="#">Terms &amp; Conditions</a></li>
-                            <li><a class="info-categories-a" href="#">Privacy Policy</a></li>
-                            <li><a class="info-categories-a" href="#">How to Buy</a></li>
-                            <li><a class="info-categories-a" href="#">How to Sell</a></li>
-                            <li><a class="info-categories-a" href="#">Promotion</a></li>
-                        </ul>
-                    </div>
-                    <div class="info-column">
-                        <h5 class="info-column-h5">SHOP CATEGORY</h5>
-                        <ul class="info-categories">
-                            <li><a class="info-categories-a" href="product.html">Men</a></li>
-                            <li><a class="info-categories-a" href="#">Women</a></li>
-                            <li><a class="info-categories-a" href="#">Child</a></li>
-                            <li><a class="info-categories-a" href="#">Apparel</a></li>
-                            <li><a class="info-categories-a" href="#">Browse All</a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            <div class="footer">
-                <div class="container">
-                    <div class="footer-left">
-                        &copy; 2017 Brand All Rights Reserved.
-                    </div>
-                    <div class="footer-right">
-                        <div class="icon-social"><a class="icon-social-a" href="#"><i class="fab fa-facebook-f"></i></a></div>
-                        <div class="icon-social"><a class="icon-social-a" href="#"><i class="fab fa-twitter"></i></a></div>
-                        <div class="icon-social no-link"><i class="fab fa-linkedin-in"></i></div>
-                        <div class="icon-social"><a class="icon-social-a" href="#"><i class="fab fa-pinterest"></i></a></div>
-                        <div class="icon-social"><a class="icon-social-a" href="#"><i class="fab fa-google-plus-g"></i></a></div>
-                    </div>
-                </div>
-            </div>
-        </footer>
+        <footer-elem></footer-elem>
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
 <script src="dropoutComp.js"></script>
 <script src="dropdownMenu.js"></script>
+<script src="footerComp.js"></script>
 <script src="main.js"></script>
     
     <!-- пока страница грузится, пользователь видит черный экран и крутящийся квадратик --> 

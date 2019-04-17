@@ -25,7 +25,7 @@ Vue.component('account-button', {
                 {link: 'checkout.html', title: 'Check Out'},
                 {link: 'single-page.html', title: 'Single Page'},
                 {link: 'product.html', title: 'Products'},
-                {link: 'hopping-cart.html', title: 'Shopping Cart'},
+                {link: 'shopping-cart.html', title: 'Shopping Cart'},
             ],
         }
     },
