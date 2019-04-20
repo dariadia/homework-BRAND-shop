@@ -21,15 +21,9 @@ Vue.component('products', {
             this.filtered = this.products.filter(el => regexp.test(el.product_name));
         }
     },
-template: `<section class="featured-items">
-                <div class="container">
-                    <h3>Featured Items</h3>
-                    <p>Shop for items based on what we featured in this week</p>
-                </div>
-                <div class="product-box"><div class="container product-flex">
-                    <product v-for="product of filtered" :key="product.id_product" :product="product"></product>
-                </div></div>
-            </section>`
+template: `<div class="container product-flex">
+                <product v-for="(product, index) in filtered" v-if="index <= 7" :key="product.id_product" :product="product"></product>
+            </div>`
 });
 
 Vue.component('product', {
