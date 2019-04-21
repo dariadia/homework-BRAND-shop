@@ -21,49 +21,34 @@ Vue.component('dropout', {
     props: ['item'],
     template: `<li class="menu-list"><a href="product.html" class="menu-link">{{item.name}}</a>
                 <div class="drop" :class="item.class">
-                    <dropout-lg-ul></dropout-lg-ul>
-                    <div>
-                        <dropout-ul></dropout-ul>
-                        <dropout-ul class="second element"></dropout-ul>
-                    </div>
-                    <div>
                     <dropout-ul></dropout-ul>
-                    <div class="second-element jello-horizontal">
-                        <a class="super-sale" href="#"><img src="img/super-sale.png" alt="super sale banner">
-                            <h3 class="super-sale-text">SUPER SALE</h3>
-                        </a>
+                    <div>
+                        <dropout-ul :short="true"></dropout-ul>
+                        <dropout-ul :short="true" class="second element"></dropout-ul>
                     </div>
-                </div>
+                    <div>
+                        <dropout-ul :short="true"></dropout-ul>
+                        <div class="second-element jello-horizontal">
+                            <a class="super-sale" href="#"><img src="img/super-sale.png" alt="super sale banner">
+                                <h3 class="super-sale-text">SUPER SALE</h3>
+                            </a>
+                        </div>
+                    </div>
                 </div>
                </li>`
 });
 
-
 Vue.component('dropout-ul', {
-    data(){
-        return {
-            list: ['Dresses', 'Tops', 'Sweaters/Knits', 'Jackets/Coats'],
-        }
-    },
-    template: `<div class="drop-flex">
-    <h3 class="drop-h3">WOMEN</h3>
-    <ul class="drop-ul">
-                <li v-for="item in list"><a href="#" class="drop-link">{{item}}</a></li>
-             </ul>
-             </div>`
-});
-
-
-Vue.component('dropout-lg-ul', {
+    props: ['short'],
     data(){
         return {
             list: ['Dresses', 'Tops', 'Sweaters/Knits', 'Jackets/Coats', 'Blazers', 'Denim', 'Leggings/Pants', 'Skirts/Shorts', 'Accessories', 'Bags/Purses', 'Swimwear/Underwear', 'Nightwear'],
         }
     },
     template: `<div class="drop-flex">
-    <h3 class="drop-h3">WOMEN</h3>
-    <ul class="drop-ul">
-                <li v-for="item in list"><a href="#" class="drop-link">{{item}}</a></li>
-             </ul>
+                <h3 class="drop-h3">WOMEN</h3>
+                <ul class="drop-ul">
+                    <li v-for="(item, index) in list" v-if="short ? index <= 3 : index <= list.length" :key="index" :item="item"><a href="#" class="drop-link">{{item}}</a></li>
+                </ul>
              </div>`
 });
