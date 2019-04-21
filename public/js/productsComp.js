@@ -31,7 +31,7 @@ Vue.component('product', {
     props: ['product'],
     data(){
         return {
-            isClicked: false,
+            isLiked: false,
         }
     },
     template: `<div class="product">
@@ -42,6 +42,6 @@ Vue.component('product', {
             </div>
             <button class="product-add" @click="$root.$refs.cart.addProduct(product)"><i class="fas fa-shopping-cart product-add-to-cart"></i>&nbsp;&nbsp;add to cart</button>
             <button class="product-repost"><i class="fas fa-retweet product-add-to-cart"></i></button>
-            <button class="product-like" @click= "isClicked = !isClicked" :class="{liked: isClicked}"><i class="far fa-heart product-add-to-cart"></i></button>
+            <button class="product-like" @click= "isLiked = !isLiked" :class="{liked: isLiked}"><i class="far fa-heart product-add-to-cart"></i></button>
         </div>`
 })
