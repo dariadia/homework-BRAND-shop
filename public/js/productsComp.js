@@ -4,7 +4,6 @@ Vue.component('products', {
         return {
             filtered: [],
             products: [],
-            catalogUrl: '/catalogData.json',
         }
     },
     mounted(){

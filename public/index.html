@@ -32,47 +32,12 @@
                         </form>
                     </div>
                     <div class="header-right">
-                        <div class="drop-cart">
-                            <a class="cart" href="shopping-cart.html"><i class="fas fa-shopping-cart cart-header"></i></a>
-                            <div class="drop drop-cart-after">
-                                <div class="drop-flex">
-                                    <div class="drop-cart-box">
-                                        <a class="drop-cart-box-img" href="single-page.html"><img src="img/cart-item-1.png" alt="this item is in your cart"></a>
-                                        <div class="drop-cart-info">
-                                            <a class="cart-item" href="single-page.html">
-                                                <h5 class="drop-cart-box-h5">REBOX ZANE</h5>
-                                            </a>
-                                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
-                                            <h6 class="drop-cart-box-h6">1 x $250</h6>
-                                        </div>
-                                        <button class="button_delete-item"><i class="fas fa-times-circle"></i></button>
-                                    </div>
-                                    <div class="drop-cart-box drop-cart-box-second">
-                                        <a class="drop-cart-box-img" href="single-page.html"><img src="img/cart-item-2.png" alt="this item is in your cart"></a>
-                                        <div class="drop-cart-info">
-                                            <a class="cart-item" href="single-page.html">
-                                                <h5 class="drop-cart-box-h5">REBOX ZANE</h5>
-                                            </a>
-                                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
-                                            <h6 class="drop-cart-box-h6">1 x $250</h6>
-                                        </div>
-                                        <button class="button_delete-item"><i class="fas fa-times-circle"></i></button>
-                                    </div>
-                                    <div class="drop-cart-total">
-                                        <h3 class="drop-cart-total-h3">TOTAL</h3>
-                                        <h3 class="drop-cart-total-h3">&#36;500.00</h3>
-                                    </div>
-                                    <a href="checkout.html"><button class="button_continue drop-cart-checkout">
-                                        Checkout
-                                    </button></a>
-                                    <a href="checkout.html"><button class="button_continue drop-cart-go-to">
-                                        Go&nbsp;to&nbsp;cart
-                                    </button>
-                                </a>
-                                </div></div>
+                            <div class="drop-cart">
+                                <a class="cart" href="shopping-cart.html"><i class="fas fa-shopping-cart cart-header"></i></a>
+                                <cart ref="cart"></cart>
+                            </div>
+                            <account-button></account-button>
                         </div>
-                        <account-button></account-button>
-                    </div>
                 </div>
             </header>
             <nav class="navigation">
@@ -138,7 +103,8 @@
                     <p>Shop for items based on what we featured in this week</p>
                 </div>
                 <div class="product-box">        
-                    <products :featured="true"></products>
+                    <products :featured="true" ref="products"></products>
+                    <error ref="error"></error>
                 </div>
             </section>
             <div class="browse">
@@ -204,6 +170,7 @@
 <script src="js/footerComp.js"></script>
 <script src="js/productsComp.js"></script>
 <script src="js/errorComp.js"></script>
+<script src="js/cartComp.js"></script>
 <script src="js/main.js"></script>
 
     <!-- пока страница грузится, пользователь видит черный экран и крутящийся квадратик --> 

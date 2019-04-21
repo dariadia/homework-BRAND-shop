@@ -9,7 +9,7 @@ Vue.component('aside-menu', {
 
 
 Vue.component('aside-details', {
-    props: ['title'],
+    props: ['title', 'open'],
     data(){ 
         return {
             isClosed: true,

@@ -1,7 +1,14 @@
 {
-    "amount": 0,
-    "countGoods": 0,
+    "amount": 1,
+    "countGoods": 1,
     "contents": [
-        
+        {
+            "id_product": 123,
+            "img": "img/featured1.png",
+            "name": "MANGO PEOPLE T-SHIRT",
+            "page": "single-page.html",
+            "price": "$ 52.00",
+            "quantity": 1
+          }
     ]
 }
