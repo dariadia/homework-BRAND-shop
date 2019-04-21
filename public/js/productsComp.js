@@ -1,5 +1,5 @@
 Vue.component('products', {
-    props: ['condition'],
+    props: ['featured'],
     data(){
         return {
             filtered: [],
@@ -23,7 +23,7 @@ Vue.component('products', {
         }
     },
 template: `<div class="container product-flex">
-                <product v-for="(product, index) in filtered" v-if="index <= condition" :key="product.id_product" :product="product"></product>
+                <product v-for="(product, index) in filtered" v-if="featured ? index <= 7 : index >= 12" :key="product.id_product" :product="product"></product>
             </div>`
 });
 
