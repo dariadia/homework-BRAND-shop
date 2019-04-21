@@ -7,9 +7,9 @@ Vue.component('drop-down-menu', {
     },
     template: `<div class="dropdown-menu menu" aria-labelledby="btnGroupDrop1">
                 <div class="drop-flex drop-browse"><h3 class="drop-h3">WOMEN</h3>
-                <ul class="drop-ul">
-                    <li v-for="item of menuItemsFem"><a href="#" class="drop-link">{{item}}</a></li>
-                </ul>
+                    <ul class="drop-ul">
+                        <li v-for="item of menuItemsFem"><a href="#" class="drop-link">{{item}}</a></li>
+                    </ul>
                 </div>
                 <div class="drop-flex drop-browse"><h3 class="drop-h3">MEN</h3>
                 <ul class="drop-ul">

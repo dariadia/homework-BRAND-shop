@@ -1344,7 +1344,7 @@ button {
 
 
 .you-may-also-like {
-    height: 645px;
+    height: 625px;
 }
 
 .section-h3 {
@@ -1635,8 +1635,6 @@ button {
 .menu-list:hover .drop {
     display: flex;
 }
-
-
 
 .second-element {
     margin-top: 37px;

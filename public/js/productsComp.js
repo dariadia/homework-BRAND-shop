@@ -26,6 +26,25 @@ template: `<div class="container product-flex">
             </div>`
 });
 
+Vue.component('products-suggested', {
+    data(){
+        return {
+            products: [],
+        }
+    },
+    mounted(){
+        this.$parent.getJson(`/api/products`)
+            .then(data => {
+                for(let el of data){
+                    this.products.push(el);
+                }
+            });
+    },
+template: `<div class="container product-flex">
+                <product v-for="(product, index) in products" v-if="index >= 8 && index <= 11" :key="product.id_product" :product="product"></product>
+            </div>`
+});
+
 Vue.component('product', {
     props: ['product'],
     data(){
