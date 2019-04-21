@@ -1,4 +1,5 @@
 Vue.component('products', {
+    props: ['condition'],
     data(){
         return {
             filtered: [],
@@ -22,7 +23,7 @@ Vue.component('products', {
         }
     },
 template: `<div class="container product-flex">
-                <product v-for="(product, index) in filtered" v-if="index <= 7" :key="product.id_product" :product="product"></product>
+                <product v-for="(product, index) in filtered" v-if="index <= condition" :key="product.id_product" :product="product"></product>
             </div>`
 });
 
@@ -35,5 +36,7 @@ Vue.component('product', {
                 <p class="product-price">{{product.price}}</p>
             </div>
             <button class="product-add" @click="$root.$refs.cart.addProduct(product)"><i class="fas fa-shopping-cart product-add-to-cart"></i>&nbsp;&nbsp;add to cart</button>
+            <a class="product-repost" href="#"><i class="fas fa-retweet product-add-to-cart"></i></a>
+            <a class="product-like" href="#"><i class="far fa-heart  product-add-to-cart"></i></a>
         </div>`
 })
