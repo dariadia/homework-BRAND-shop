@@ -2,7 +2,6 @@ Vue.component('products', {
     props: ['featured'],
     data(){
         return {
-            filtered: [],
             products: [],
         }
     },
@@ -11,18 +10,11 @@ Vue.component('products', {
             .then(data => {
                 for(let el of data){
                     this.products.push(el);
-                    this.filtered.push(el);
                 }
             });
     },
-    methods: {
-        filter(value){
-            let regexp = new RegExp(value, 'i');
-            this.filtered = this.products.filter(el => regexp.test(el.product_name));
-        }
-    },
 template: `<div class="container product-flex">
-                <product v-for="(product, index) in filtered" v-if="featured ? index <= 7 : index >= 12" :key="product.id_product" :product="product"></product>
+                <product v-for="(product, index) in products" v-if="featured ? index <= 7 : index >= 12" :key="product.id_product" :product="product"></product>
             </div>`
 });
 

@@ -72,6 +72,11 @@ Vue.component('cart', {
 });
 Vue.component('cart-item', {
     props: ['cartItem'],
+    // mounted(){
+    //     return {
+    //         productTotal: cartItem.quantity*cartItem.price,
+    //     }
+    // },
     template: `<div class="drop-cart-box">
                     <a class="drop-cart-box-img" :href="cartItem.page"><img height="90" :src="cartItem.img" alt="this item is in your cart"></a>
                     <div class="drop-cart-info">
@@ -79,7 +84,7 @@ Vue.component('cart-item', {
                             <h5 class="drop-cart-box-h5">{{cartItem.name}}</h5>
                         </a>
                         <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
-                        <h6 class="drop-cart-box-h6">{{ cartItem.quantity }} x {{cartItem.price}} = {{cartItem.quantity*cartItem.price}}</h6>
+                        <h6 class="drop-cart-box-h6">{{ cartItem.quantity }} x $ {{cartItem.price}} = $ {{cartItem.quantity*cartItem.price}}</h6>
                     </div>
                     <button class="button_delete-item" @click="$emit('remove', cartItem)"> <i class="fas fa-times-circle"></i></button>
                 </div>`
