@@ -49,8 +49,8 @@ Vue.component('cart', {
     },
    template:  ` 
                 <div class="drop drop-cart-after">
-                <div v-if="!cartItems.length">Cart is empty</div>
-                <div class="drop-flex">
+                <p class="message_cart__empty" v-if="!cartItems.length">Cart is empty</p>
+                <div v-else class="drop-flex">
                     <cart-item v-for="product of cartItems"  
                     :key="product.id_product"
                     :img="product.img"
@@ -58,7 +58,7 @@ Vue.component('cart', {
                     @remove="remove"></cart-item>
                     <div class="drop-cart-total">
                         <h3 class="drop-cart-total-h3">TOTAL</h3>
-                        <h3 class="drop-cart-total-h3">&#36;500.00</h3>
+                        <h3 class="drop-cart-total-h3">TODO</h3>
                     </div>
                     <a href="checkout.html"><button class="button_continue drop-cart-checkout">
                         Checkout
@@ -79,8 +79,8 @@ Vue.component('cart-item', {
                             <h5 class="drop-cart-box-h5">{{cartItem.name}}</h5>
                         </a>
                         <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
-                        <h6 class="drop-cart-box-h6">{{ cartItem.quantity }} x {{cartItem.price}}</h6>
+                        <h6 class="drop-cart-box-h6">{{ cartItem.quantity }} x {{cartItem.price}} = {{cartItem.quantity*cartItem.price}}</h6>
                     </div>
-                    <button class="button_delete-item"><i class="fas fa-times-circle"></i></button>
+                    <button class="button_delete-item" @click="$emit('remove', cartItem)"> <i class="fas fa-times-circle"></i></button>
                 </div>`
 })

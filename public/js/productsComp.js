@@ -37,7 +37,7 @@ Vue.component('product', {
             <a :href="product.page"><img class="product-img" :src="product.img" alt="photo product 1"></a>
             <div class="product-text">
                 <a class="product-name" :href="product.page">{{ product.name }}</a>
-                <p class="product-price">{{product.price}}</p>
+                <p class="product-price">$ {{product.price}}</p>
             </div>
             <button class="product-add" @click="$root.$refs.cart.addProduct(product)"><i class="fas fa-shopping-cart product-add-to-cart"></i>&nbsp;&nbsp;add to cart</button>
             <button class="product-repost"><i class="fas fa-retweet product-add-to-cart"></i></button>
