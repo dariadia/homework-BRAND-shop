@@ -4,7 +4,7 @@ Vue.component('products', {
         return {
             filtered: [],
             products: [],
-            catalogUrl: '/catalogData.json'
+            catalogUrl: '/catalogData.json',
         }
     },
     mounted(){
@@ -29,6 +29,11 @@ template: `<div class="container product-flex">
 
 Vue.component('product', {
     props: ['product'],
+    data(){
+        return {
+            isClicked: false,
+        }
+    },
     template: `<div class="product">
             <a :href="product.page"><img class="product-img" :src="product.img" alt="photo product 1"></a>
             <div class="product-text">
@@ -36,7 +41,7 @@ Vue.component('product', {
                 <p class="product-price">{{product.price}}</p>
             </div>
             <button class="product-add" @click="$root.$refs.cart.addProduct(product)"><i class="fas fa-shopping-cart product-add-to-cart"></i>&nbsp;&nbsp;add to cart</button>
-            <a class="product-repost" href="#"><i class="fas fa-retweet product-add-to-cart"></i></a>
-            <a class="product-like" href="#"><i class="far fa-heart  product-add-to-cart"></i></a>
+            <button class="product-repost"><i class="fas fa-retweet product-add-to-cart"></i></button>
+            <button class="product-like" @click= "isClicked = !isClicked" :class="{liked: isClicked}"><i class="far fa-heart product-add-to-cart"></i></button>
         </div>`
 })
