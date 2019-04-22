@@ -2,6 +2,25 @@
     "amount": null,
     "countGoods": null,
     "contents": [
-        
+        {
+            "quantity": 2,
+            "id_product": 128,
+            "img": "img/featured6.png",
+            "name": "MANGO PEOPLE T-SHIRT",
+            "page": "single-page.html",
+            "price": 52,
+            "stars": 5,
+            "liked": false
+        },
+        {
+            "quantity": 0,
+            "id_product": 236,
+            "img": "img/model-lt-2.png",
+            "name": "ALEXA SWEATER",
+            "page": "single-page.html",
+            "price": 52,
+            "stars": 2,
+            "liked": false
+        }
     ]
 }

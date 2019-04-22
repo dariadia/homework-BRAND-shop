@@ -39,11 +39,6 @@ template: `<div class="container product-flex">
 
 Vue.component('product', {
     props: ['product'],
-    data(){
-        return {
-            isLiked: false,
-        }
-    },
     template: `<div class="product">
             <a :href="product.page"><img class="product-img" :src="product.img" alt="photo product"></a>
             <div class="product-text">
@@ -52,6 +47,6 @@ Vue.component('product', {
             </div>
             <button class="product-add" @click="$root.$refs.cart.addProduct(product)"><i class="fas fa-shopping-cart product-add-to-cart"></i>&nbsp;&nbsp;add to cart</button>
             <button class="product-repost"><i class="fas fa-retweet product-add-to-cart"></i></button>
-            <button class="product-like" @click= "isLiked = !isLiked" :class="{liked: isLiked}"><i class="far fa-heart product-add-to-cart"></i></button>
+            <button class="product-like" @click="product.liked = !product.liked" :class="{liked: product.liked}"><i class="far fa-heart product-add-to-cart"></i></button>
         </div>`
 })
