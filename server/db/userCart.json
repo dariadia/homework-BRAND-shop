@@ -3,20 +3,14 @@
     "countGoods": null,
     "contents": [
         {
-            "quantity": 3,
-            "id_product": 126,
-            "img": "img/featured4.png",
-            "name": "MANGO PEOPLE T-SHIRT",
+            "quantity": "51",
+            "id_product": 789,
+            "img": "img/model-bg.png",
+            "name": "MOSCHINO CHEAP AND CHIC",
             "page": "single-page.html",
-            "price": 52
-        },
-        {
-            "quantity": 2,
-            "id_product": 237,
-            "img": "img/model-lt-3.png",
-            "name": "AGNES TOP",
-            "page": "single-page.html",
-            "price": 52
+            "price": 561,
+            "color": "red",
+            "size": "S"
         }
     ]
 }

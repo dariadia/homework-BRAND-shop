@@ -45,7 +45,7 @@ Vue.component('product', {
         }
     },
     template: `<div class="product">
-            <a :href="product.page"><img class="product-img" :src="product.img" alt="photo product 1"></a>
+            <a :href="product.page"><img class="product-img" :src="product.img" alt="photo product"></a>
             <div class="product-text">
                 <a class="product-name" :href="product.page">{{ product.name }}</a>
                 <p class="product-price">$ {{product.price}}</p>
