@@ -2,15 +2,6 @@
     "amount": null,
     "countGoods": null,
     "contents": [
-        {
-            "quantity": "51",
-            "id_product": 789,
-            "img": "img/model-bg.png",
-            "name": "MOSCHINO CHEAP AND CHIC",
-            "page": "single-page.html",
-            "price": 561,
-            "color": "red",
-            "size": "S"
-        }
+        
     ]
 }

@@ -2,7 +2,6 @@ Vue.component('cart', {
     data(){
         return {
             cartItems: [],
-            showCart: false,
         }
     },
     methods: {
@@ -38,6 +37,14 @@ Vue.component('cart', {
                 }
             })
         }, 
+        // getTotal(){
+        //     let total;
+        //     for (let i = 0; i < this.cartItems.length; i++){
+        //         total += this.cartItems[i].quantity*this.cartItems[i].price;
+        //     } 
+        //     return total;
+        // }
+        
     },
     mounted(){
         this.$parent.getJson(`/api/cart`)
@@ -58,7 +65,7 @@ Vue.component('cart', {
                     @remove="remove"></cart-item>
                     <div class="drop-cart-total">
                         <h3 class="drop-cart-total-h3">TOTAL</h3>
-                        <h3 class="drop-cart-total-h3">TODO</h3>
+                        <h3 class="drop-cart-total-h3">$ TODO </h3>
                     </div>
                     <a href="checkout.html"><button class="button_continue drop-cart-checkout">
                         Checkout
@@ -83,7 +90,7 @@ Vue.component('cart-item', {
                         <a class="cart-item" :href="cartItem.page">
                             <h5 class="drop-cart-box-h5">{{cartItem.name}}</h5>
                         </a>
-                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                        <i v-for="star in cartItem.stars" class="fas fa-star"></i>
                         <h6 class="drop-cart-box-h6">{{ cartItem.quantity }} x $ {{cartItem.price}} = $ {{cartItem.quantity*cartItem.price}}</h6>
                     </div>
                     <button class="button_delete-item" @click="$emit('remove', cartItem)"> <i class="fas fa-times-circle"></i></button>
