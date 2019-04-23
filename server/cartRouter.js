@@ -20,7 +20,7 @@ router.put('/:id', (req, res) => {
     handler(req, res, 'change', 'server/db/userCart.json')
 });
 router.delete('/:id', (req, res) => {
-    handler(req, res, 'remove', 'dist/server/db/userCart.json')
+    handler(req, res, 'remove', 'server/db/userCart.json')
 });
 
 
