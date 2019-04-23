@@ -4,6 +4,7 @@ Vue.component('cart', {
         return {
             cartItems: [],
             totalSumArr: [],
+            total: 0,
         }
     },
     methods: {
@@ -65,7 +66,8 @@ Vue.component('cart', {
         
     },
    template:  `<div>
-                <section v-if="extended" class="cart-product-details">
+                <div v-if="extended">
+                <section class="cart-product-details">
                 <div class="container">
                     <div class="cart-oder-details-header-all">
                         <span class="cart-oder-details-header first-header-el">Product Details</span>
@@ -83,10 +85,12 @@ Vue.component('cart', {
                     @remove="remove"></cart-item-extended>
                     <div class="flex-buttons">
                         <button class="button_continue flexed-button">CLEAR SHOPPING CART</button>
-                        <button class="button_continue flexed-button">CONTINUE sHOPPING</button>
+                        <button class="button_continue flexed-button"><a href="index.html" class="check-out__proceed">CONTINUE sHOPPING</a></button>
                     </div>
                 </div>
                 </section>
+                <check-out-details :total="getTotal()"></check-out-details>
+                </div>
 
                 <div v-else class="drop-cart">
                     <a class="cart" href="shopping-cart.html"><i class="fas fa-shopping-cart cart-header" :class="{cart__empty: !cartItems.length}"></i></a>
@@ -100,7 +104,7 @@ Vue.component('cart', {
                             @remove="remove"></cart-item>
                             <div class="drop-cart-total">
                                 <h3 class="drop-cart-total-h3">TOTAL</h3>
-                                <h3 class="drop-cart-total-h3">$ {{ getTotal()}} </h3>
+                                <h3 class="drop-cart-total-h3">$ {{ getTotal() }} </h3>
                             </div>
                             <a href="checkout.html"><button class="button_continue drop-cart-checkout">
                                 Checkout
@@ -115,6 +119,51 @@ Vue.component('cart', {
             
             </div>`
 });
+
+Vue.component('check-out-details', {
+    props: ['total'],
+    data(){
+        return {
+
+        }
+    },
+    template: `<div>
+    <div class="container">
+        <div class="cart-shipping-address-flex">
+            <div class="cart-shipping-address">
+                <h3 class="cart-shipping-address-h3">Shipping Address</h3>
+                <form class="form-shipping-address">
+                    <select class="select form-control form-shipping-address" id="select-color">
+                        <option value="state">&nbsp; Bangladesh</option>
+                        <option value="state">&nbsp; India</option>
+                        <option value="state">&nbsp; Myanmar</option>
+                    </select>
+                    <input type="text" class="form-control form-shipping-address" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="State" required>
+                    <input type="number" class="form-control form-shipping-addressl" id="exampleInputPassword1" placeholder="Postcode / Zip" required>
+                    <button class="button_continue button-get-a-quote">
+                        get a quote
+                    </button>
+                </form>
+            </div>
+            <div class="cart-shipping-address">
+                <h3 class="cart-shipping-address-h3">coupon discount</h3>
+                <h5 class="cart-enter-your-coupon">Enter your coupon code if you have one</h5>
+                <input type="text" class="form-control form-shipping-address" id="exampleInputEmail2" aria-describedby="emailHelp" placeholder="Coupon">
+                <button class="button_continue button-get-a-quote apply">Apply coupon</button>
+            </div>
+            <div class="cart-shipping-address address-colored">
+                <h6 class="address-colored-h6">Sub total&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#36;{{ total }}</h6>
+                <h5 class="address-colored-h5">GRAND TOTAL&nbsp;&nbsp;<span class="address-colored-pink">&nbsp;&#36;{{ total }}</span></h5>
+                <div class="button-block-decoration"> </div>
+                <div class="button-block">
+                    <button class="button button_checkout"><a class="check-out__proceed" href="checkout.html">proceed to checkout</a></button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>`
+});
+
 Vue.component('cart-item', {
     props: ['cartItem'],
     template: `<div class="drop-cart-box">
