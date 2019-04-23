@@ -2,9 +2,9 @@
     "contents": [
         {
             "quantity": 2,
-            "id_product": 345,
-            "img": "img/products-men-2.png",
-            "name": "MANGO PEOPLE T-SHIRT",
+            "id_product": 237,
+            "img": "img/model-lt-3.png",
+            "name": "AGNES TOP",
             "page": "single-page.html",
             "price": 52,
             "stars": 5,

@@ -1,4 +1,5 @@
 Vue.component('cart', {
+    props: ['extended'],
     data(){
         return {
             cartItems: [],
@@ -50,7 +51,6 @@ Vue.component('cart', {
         getTotal(){
             return total = this.totalSumArr.reduce( (a, b) => { return a + b; }, 0);
         }
-        
     },
     mounted(){
         this.$parent.getJson(`/api/cart`)
@@ -64,36 +64,59 @@ Vue.component('cart', {
             });
         
     },
-   template:  ` 
-                <div class="drop drop-cart-after">
-                <p class="message_cart__empty" v-if="!cartItems.length">Cart is empty</p>
-                <div v-else class="drop-flex">
-                    <cart-item v-for="product of cartItems"  
+   template:  `<div>
+                <section v-if="extended" class="cart-product-details">
+                <div class="container">
+                    <div class="cart-oder-details-header-all">
+                        <span class="cart-oder-details-header first-header-el">Product Details</span>
+                        <span class="cart-oder-details-header second-header-el">unite Price</span>
+                        <span class="cart-oder-details-header second-header-el">Quantity</span>
+                        <span class="cart-oder-details-header second-header-el">shipping</span>
+                        <span class="cart-oder-details-header">Subtotal</span>
+                        <span class="cart-oder-details-header last-header-el">ACTION</span>
+                    </div>
+                    <p class="message_ext-cart__empty" v-if="!cartItems.length">Your cart appears to be empty  &nbsp; :( </p>
+                    <cart-item-extended v-for="product of cartItems"  
                     :key="product.id_product"
                     :img="product.img"
                     :cart-item="product"
-                    @remove="remove"></cart-item>
-                    <div class="drop-cart-total">
-                        <h3 class="drop-cart-total-h3">TOTAL</h3>
-                        <h3 class="drop-cart-total-h3">$ {{ getTotal()}} </h3>
+                    @remove="remove"></cart-item-extended>
+                    <div class="flex-buttons">
+                        <button class="button_continue flexed-button">CLEAR SHOPPING CART</button>
+                        <button class="button_continue flexed-button">CONTINUE sHOPPING</button>
                     </div>
-                    <a href="checkout.html"><button class="button_continue drop-cart-checkout">
-                        Checkout
-                    </button></a>
-                    <a href="checkout.html"><button class="button_continue drop-cart-go-to">
-                        Go&nbsp;to&nbsp;cart
-                    </button>
-                </a>
                 </div>
+                </section>
+
+                <div v-else class="drop-cart">
+                    <a class="cart" href="shopping-cart.html"><i class="fas fa-shopping-cart cart-header" :class="{cart__empty: !cartItems.length}"></i></a>
+                    <div  class="drop drop-cart-after">
+                        <p class="message_cart__empty" v-if="!cartItems.length">Cart is empty</p>
+                        <div v-else class="drop-flex">
+                            <cart-item v-for="product of cartItems"  
+                            :key="product.id_product"
+                            :img="product.img"
+                            :cart-item="product"
+                            @remove="remove"></cart-item>
+                            <div class="drop-cart-total">
+                                <h3 class="drop-cart-total-h3">TOTAL</h3>
+                                <h3 class="drop-cart-total-h3">$ {{ getTotal()}} </h3>
+                            </div>
+                            <a href="checkout.html"><button class="button_continue drop-cart-checkout">
+                                Checkout
+                            </button></a>
+                            <a href="checkout.html"><button class="button_continue drop-cart-go-to">
+                                Go&nbsp;to&nbsp;cart
+                            </button>
+                        </a>
+                        </div>
+                    </div>
+                </div>
+            
             </div>`
 });
 Vue.component('cart-item', {
     props: ['cartItem'],
-    // mounted(){
-    //     return {
-    //         productTotal: cartItem.quantity*cartItem.price,
-    //     }
-    // },
     template: `<div class="drop-cart-box">
                     <a class="drop-cart-box-img" :href="cartItem.page"><img height="90" :src="cartItem.img" alt="this item is in your cart"></a>
                     <div class="drop-cart-info">
@@ -105,4 +128,21 @@ Vue.component('cart-item', {
                     </div>
                     <button class="button_delete-item" @click="$emit('remove', cartItem)"> <i class="fas fa-times-circle"></i></button>
                 </div>`
+});
+
+Vue.component('cart-item-extended', {
+    props: ['cartItem'],
+    template: `<article class="cart-oder-details-box">
+                    <a class="cart-oder-details-box-a" :href="cartItem.page"><img height="120" :src="cartItem.img" alt="this item is in your cart"></a>
+                    <div class="cart-oder-details-box-para">
+                        <h3 class="cart-oder-details-box-h3">{{cartItem.name}}</h3>
+                        <h6 class="cart-oder-details-box-h6"><span class="bolder">Color:</span> multi</h6>
+                        <h6 class="cart-oder-details-box-h6"><span class="bolder">Size:</span> one-fits-all</h6>
+                    </div>
+                    <h6 class="cart-oder-details-box-h6 cart-price"> $ {{cartItem.price}}</h6>
+                    <input v-model ="cartItem.quantity" class="cart-quantity select" type="number" placeholder="2" required>
+                    <h6 class="cart-oder-details-box-h6 cart-price">FREE</h6>
+                    <h6 class="cart-oder-details-box-h6 cart-price-subtotal">$ {{cartItem.quantity*cartItem.price}} </h6>
+                    <button class="button_delete-item" @click="$emit('remove', cartItem)"> <i class="fas fa-times-circle"></i></button>
+                </article>`
 })

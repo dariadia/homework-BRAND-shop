@@ -33,10 +33,7 @@
                         </form>
                     </div>
                     <div class="header-right">
-                        <div class="drop-cart">
-                            <a class="cart" href="shopping-cart.html"><i class="fas fa-shopping-cart cart-header"></i></a>
-                            <cart ref="cart"></cart>
-                        </div>
+                        <cart ref="cart"></cart>
                         <account-button></account-button>
                     </div>
                 </div>
@@ -60,65 +57,7 @@
                     </div>
                 </div>
             </nav>
-            <section class="cart-product-details">
-                <div class="container">
-                    <div class="cart-oder-details-header-all">
-                        <span class="cart-oder-details-header first-header-el">Product Details</span>
-                        <span class="cart-oder-details-header second-header-el">unite Price</span>
-                        <span class="cart-oder-details-header second-header-el">Quantity</span>
-                        <span class="cart-oder-details-header second-header-el">shipping</span>
-                        <span class="cart-oder-details-header">Subtotal</span>
-                        <span class="cart-oder-details-header last-header-el">ACTION</span>
-                    </div>
-                    <article class="cart-oder-details-box">
-                        <a class="cart-oder-details-box-a" href="single-page.html"><img src="img/shopping-cart-item-1.png" alt=""></a>
-                        <div class="cart-oder-details-box-para">
-                            <h3 class="cart-oder-details-box-h3">Mango People T-shirt</h3>
-                            <h6 class="cart-oder-details-box-h6"><span class="bolder">Color:</span> Red</h6>
-                            <h6 class="cart-oder-details-box-h6"><span class="bolder">Size:</span> Xll</h6>
-                        </div>
-                        <h6 class="cart-oder-details-box-h6 cart-price">&#36;150</h6>
-                        <input class="cart-quantity select" type="number" placeholder="2" required>
-                        <h6 class="cart-oder-details-box-h6 cart-price">FREE</h6>
-                        <h6 class="cart-oder-details-box-h6 cart-price-subtotal">&#36;300</h6>
-                        <button class="button_delete-item shopping-cart-delete"><i class="fas fa-times-circle"></i></button>
-                    </article>
-                    <article class="cart-oder-details-box">
-                        <a class="cart-oder-details-box-a" href="single-page.html"><img src="img/shopping-cart-item-2.png" alt=""></a>
-                        <div class="cart-oder-details-box-para">
-                            <h3 class="cart-oder-details-box-h3">Mango People T-shirt</h3>
-                            <h6 class="cart-oder-details-box-h6"><span class="bolder">Color:</span> Red</h6>
-                            <h6 class="cart-oder-details-box-h6"><span class="bolder">Size:</span> Xll</h6>
-                        </div>
-                        <h6 class="cart-oder-details-box-h6 cart-price">&#36;150</h6>
-                        <input class="cart-quantity select" type="number" placeholder="2" required>
-                        <h6 class="cart-oder-details-box-h6 cart-price">FREE</h6>
-                        <h6 class="cart-oder-details-box-h6 cart-price-subtotal">&#36;300</h6>
-                        <button class="button_delete-item shopping-cart-delete"><i class="fas fa-times-circle"></i></button>
-                    </article>
-                    <article class="cart-oder-details-box">
-                        <a class="cart-oder-details-box-a" href="single-page.html"><img src="img/shopping-cart-item-3.png" alt=""></a>
-                        <div class="cart-oder-details-box-para">
-                            <h3 class="cart-oder-details-box-h3">Mango People T-shirt</h3>
-                            <h6 class="cart-oder-details-box-h6"><span class="bolder">Color:</span> Red</h6>
-                            <h6 class="cart-oder-details-box-h6"><span class="bolder">Size:</span> Xll</h6>
-                        </div>
-                        <h6 class="cart-oder-details-box-h6 cart-price">&#36;150</h6>
-                        <input class="cart-quantity select" type="number" placeholder="2" required>
-                        <h6 class="cart-oder-details-box-h6 cart-price">FREE</h6>
-                        <h6 class="cart-oder-details-box-h6 cart-price-subtotal">&#36;300</h6>
-                        <button class="button_delete-item shopping-cart-delete"><i class="fas fa-times-circle"></i></button>
-                    </article>
-                    <div class="flex-buttons">
-                        <button class="button_continue flexed-button">
-                            cLEAR SHOPPING CART
-                        </button>
-                        <button class="button_continue flexed-button">
-                            cONTINUE sHOPPING
-                        </button>
-                    </div>
-                </div>
-            </section>
+            <cart ref="cart" :extended="true"></cart>
             <div>
                 <div class="container">
                     <div class="cart-shipping-address-flex">
