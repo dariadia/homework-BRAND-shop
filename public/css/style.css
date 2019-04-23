@@ -283,6 +283,16 @@ button {
     border-style: none;
 }
 
+.check-out__proceed {
+    text-decoration: none;
+    color: inherit;
+}
+
+.check-out__proceed:hover {
+    text-decoration: none;
+    color: inherit;
+}
+
 .cart {
     padding: 9px 26px;
     text-decoration: none;
