@@ -2,6 +2,7 @@ Vue.component('cart', {
     data(){
         return {
             cartItems: [],
+            totalSumArr: [],
         }
     },
     methods: {
@@ -12,6 +13,7 @@ Vue.component('cart', {
                     .then(data => {
                         if(data.result){
                             find.quantity++;
+                            this.totalSumArr.push(find.price);
                         }
                     })
             } else {
@@ -19,17 +21,20 @@ Vue.component('cart', {
                     this.$parent.postJson(`/api/cart`, prod)
                     .then(data => {
                         if(data.result){
-                            this.cartItems.push(prod)
+                            this.cartItems.push(prod);
+                            this.totalSumArr.push(prod.price);
                         }
                     })
             }
+            
         },
         remove(product){
             if(product.quantity > 1){
                 this.$parent.putJson(`/api/cart/${product.id_product}`, {quantity: -1})
                     .then(data => {
                         if(data.result){
-                            product.quantity--
+                            product.quantity--;
+                            this.totalSumArr.splice(this.totalSumArr.indexOf(product), 1);
                         }
                     })
             } else {
@@ -37,26 +42,27 @@ Vue.component('cart', {
                     .then(data => {
                         if(data.result){
                             this.cartItems.splice(this.cartItems.indexOf(product), 1);
+                            this.totalSumArr.splice(this.totalSumArr.indexOf(product), 1);
                         }
                     })
             }
         },
-        // getTotal(){
-        //     let total;
-        //     for (let i = 0; i < this.cartItems.length; i++){
-        //         total += this.cartItems[i].quantity*this.cartItems[i].price;
-        //     } 
-        //     return total;
-        // }
+        getTotal(){
+            return total = this.totalSumArr.reduce( (a, b) => { return a + b; }, 0);
+        }
         
     },
     mounted(){
         this.$parent.getJson(`/api/cart`)
             .then(data => {
                 for(let el of data.contents){
-                    this.cartItems.push(el);
+                this.cartItems.push(el);
+                    for(let i = 0; i < el.quantity; i++){
+                        this.totalSumArr.push(el.price);
+                    }
                 }
             });
+        
     },
    template:  ` 
                 <div class="drop drop-cart-after">
@@ -69,7 +75,7 @@ Vue.component('cart', {
                     @remove="remove"></cart-item>
                     <div class="drop-cart-total">
                         <h3 class="drop-cart-total-h3">TOTAL</h3>
-                        <h3 class="drop-cart-total-h3">$ TODO </h3>
+                        <h3 class="drop-cart-total-h3">$ {{ getTotal()}} </h3>
                     </div>
                     <a href="checkout.html"><button class="button_continue drop-cart-checkout">
                         Checkout
