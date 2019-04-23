@@ -15,6 +15,11 @@
     "type": "git",
     "url": "git+https://github.com/dariadia/homework-BRAND-shop.git"
   },
+  "nodemonConfig": {
+    "ignore": [
+      "*.json"
+    ]
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",
