@@ -25,18 +25,22 @@ Vue.component('cart', {
             }
         },
         remove(product){
-            let find = this.cartItems.find(el => el.id_product === product.id_product);
-            this.$parent.putJson(`/api/cart/${find.id_product}`, {quantity: -1})
-            .then(data => {
-                if(data.result){
-                    if(find.quantity > 1){
-                        find.quantity--;
-                    } else {
-                        this.cartItems.splice(this.cartItems.indexOf(product), 1);
-                    }
-                }
-            })
-        }, 
+            if(product.quantity > 1){
+                this.$parent.putJson(`/api/cart/${product.id_product}`, {quantity: -1})
+                    .then(data => {
+                        if(data.result){
+                            product.quantity--
+                        }
+                    })
+            } else {
+                this.$parent.deleteJson(`/api/cart/${product.id_product}`)
+                    .then(data => {
+                        if(data.result){
+                            this.cartItems.splice(this.cartItems.indexOf(product), 1);
+                        }
+                    })
+            }
+        },
         // getTotal(){
         //     let total;
         //     for (let i = 0; i < this.cartItems.length; i++){
