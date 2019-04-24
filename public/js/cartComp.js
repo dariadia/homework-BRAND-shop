@@ -124,7 +124,7 @@ Vue.component('check-out-details', {
     props: ['total'],
     data(){
         return {
-
+            options: ['Bangladesh', 'India', 'Myanmar'],
         }
     },
     template: `<div>
@@ -134,15 +134,11 @@ Vue.component('check-out-details', {
                 <h3 class="cart-shipping-address-h3">Shipping Address</h3>
                 <form class="form-shipping-address">
                     <select class="select form-control form-shipping-address" id="select-color">
-                        <option value="state">&nbsp; Bangladesh</option>
-                        <option value="state">&nbsp; India</option>
-                        <option value="state">&nbsp; Myanmar</option>
+                        <option v-for="option in options" value="state">&nbsp; {{option}}</option>
                     </select>
                     <input type="text" class="form-control form-shipping-address" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="State" required>
                     <input type="number" class="form-control form-shipping-addressl" id="exampleInputPassword1" placeholder="Postcode / Zip" required>
-                    <button class="button_continue button-get-a-quote">
-                        get a quote
-                    </button>
+                    <button class="button_continue button-get-a-quote">get a quote</button>
                 </form>
             </div>
             <div class="cart-shipping-address">
