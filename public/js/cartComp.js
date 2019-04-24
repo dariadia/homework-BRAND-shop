@@ -60,7 +60,7 @@ Vue.component('cart', {
                 }
             })
         },
-        // removeAll(){ если делать так, по второму нажатию за сессию падает весь сервер
+        // removeAll(){ если делать так, по второму нажатию за сессию падает весь сервер. три других варианта реализации тоже крушат соединение 
         //     this.totalSumArr = [];
         //     this.cartItems.forEach( el => {
         //         this.$parent.deleteJson(`/api/cart/${el.id_product}`)
@@ -141,7 +141,7 @@ Vue.component('cart', {
                             <a href="checkout.html"><button class="button_continue drop-cart-checkout">
                                 Checkout
                             </button></a>
-                            <a href="checkout.html"><button class="button_continue drop-cart-go-to">
+                            <a href="shopping-cart.html"><button class="button_continue drop-cart-go-to">
                                 Go&nbsp;to&nbsp;cart
                             </button>
                         </a>
@@ -203,8 +203,8 @@ Vue.component('cart-item', {
                         <i v-for="star in cartItem.stars" class="fas fa-star"></i>
                         <h6 class="drop-cart-box-h6">{{ cartItem.quantity }} x $ {{cartItem.price}} = $ {{cartItem.quantity*cartItem.price}}</h6>
                     </div>
-                    <button class="button_delete-item circle_cart__first" @click="$emit('addProduct', cartItem)"><i class="fas fa-plus-circle circle_cart"></i></button>
-                    <button class="button_delete-item" @click="$emit('remove', cartItem)"> <i class="fas fa-minus-circle circle_cart"></i></button>
+                    <button class="button_delete-item circle_cart__first" @click="$emit('remove', cartItem)"> <i class="fas fa-minus-circle circle_cart"></i></button>
+                    <button class="button_delete-item" @click="$emit('addProduct', cartItem)"><i class="fas fa-plus-circle circle_cart"></i></button>
                 </div>`
 });
 

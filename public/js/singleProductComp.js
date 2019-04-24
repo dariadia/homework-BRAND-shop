@@ -2,7 +2,7 @@ Vue.component('single-product', {
     data(){
         return {
             item: {
-                quantity: 0,
+                quantity: 1,
                 id_product: 789,
                 img: 'img/model-bg.png',
                 name: 'MOSCHINO CHEAP AND CHIC',
