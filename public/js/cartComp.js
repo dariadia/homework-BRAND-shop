@@ -60,6 +60,17 @@ Vue.component('cart', {
                 }
             })
         },
+        removeAll(){
+            this.cartItems.forEach( el => {
+                this.$parent.deleteJson(`/api/cart/${el.id_product}`)
+                .then(data => {
+                    if(data.result){
+                        this.cartItems.splice(this.cartItems.indexOf(el), 1);
+                        this.totalSumArr = [];
+                    }
+            })
+            }); 
+        },
         getTotal(){
             return total = this.totalSumArr.reduce( (a, b) => { return a + b; }, 0);
         }
@@ -93,9 +104,11 @@ Vue.component('cart', {
                     :key="product.id_product"
                     :img="product.img"
                     :cart-item="product"
-                    @remove="remove" @addProduct="addProduct" @removeAllOfType="removeAllOfType"></cart-item-extended>
+                    @remove="remove" 
+                    @addProduct="addProduct" 
+                    @removeAllOfType="removeAllOfType"></cart-item-extended>
                     <div class="flex-buttons">
-                        <button class="button_continue flexed-button">CLEAR SHOPPING CART</button>
+                        <button class="button_continue flexed-button" @click="removeAll()">CLEAR SHOPPING CART</button>
                         <button class="button_continue flexed-button"><a href="index.html" class="check-out__proceed">CONTINUE sHOPPING</a></button>
                     </div>
                 </div>
