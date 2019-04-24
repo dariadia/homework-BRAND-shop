@@ -1,3 +1,4 @@
+// компонент выпадающего меню (у поля Browse в верхней панели магазина)
 Vue.component('drop-down-menu', {
     data(){
         return {
@@ -18,6 +19,7 @@ Vue.component('drop-down-menu', {
                 </div></div>`
 });
 
+//компонент Аккаунт (здесь хранятся ссылки на все страницы магазина)
 Vue.component('account-button', {
     data(){
         return {
