@@ -1936,6 +1936,18 @@ button {
     transition: color 0.2s;
 }
 
+.circle_cart{
+    padding: 7px;
+    margin-left: 3px!important;
+    margin-right: 3px!important;
+    color: grey;
+    transition: color 0.2s;
+}
+
+.circle_cart__first {
+    margin-left: 10px;
+}
+
 .fa-minus-circle:hover {
     color: #f16d7f;
     cursor: pointer;

@@ -1,3 +1,24 @@
 {
-    "contents": []
+    "contents": [
+        {
+            "quantity": 5,
+            "id_product": 126,
+            "img": "img/featured4.png",
+            "name": "MANGO PEOPLE T-SHIRT",
+            "page": "single-page.html",
+            "price": 52,
+            "stars": 4,
+            "liked": false
+        },
+        {
+            "quantity": 1,
+            "id_product": 234,
+            "img": "img/featured8.png",
+            "name": "MANGO PEOPLE T-SHIRT",
+            "page": "single-page.html",
+            "price": 52,
+            "stars": 5,
+            "liked": false
+        }
+    ]
 }

@@ -119,10 +119,11 @@ Vue.component('cart', {
                             :key="product.id_product"
                             :img="product.img"
                             :cart-item="product"
-                            @remove="remove"></cart-item>
+                            @remove="remove"
+                            @addProduct="addProduct"></cart-item>
                             <div class="drop-cart-total">
                                 <h3 class="drop-cart-total-h3">TOTAL</h3>
-                                <h3 class="drop-cart-total-h3">$ {{ total }} </h3>
+                                <h3 class="drop-cart-total-h3">$ {{ getTotal() }} </h3>
                             </div>
                             <a href="checkout.html"><button class="button_continue drop-cart-checkout">
                                 Checkout
@@ -189,7 +190,8 @@ Vue.component('cart-item', {
                         <i v-for="star in cartItem.stars" class="fas fa-star"></i>
                         <h6 class="drop-cart-box-h6">{{ cartItem.quantity }} x $ {{cartItem.price}} = $ {{cartItem.quantity*cartItem.price}}</h6>
                     </div>
-                    <button class="button_delete-item" @click="$emit('remove', cartItem)"> <i class="fas fa-times-circle"></i></button>
+                    <button class="button_delete-item circle_cart__first" @click="$emit('addProduct', cartItem)"><i class="fas fa-plus-circle circle_cart"></i></button>
+                    <button class="button_delete-item" @click="$emit('remove', cartItem)"> <i class="fas fa-minus-circle circle_cart"></i></button>
                 </div>`
 });
 
