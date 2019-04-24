@@ -1,5 +1,5 @@
 Vue.component('cart', {
-    props: ['extended'],
+    props: ['extended', 'inside'],
     data(){
         return {
             cartItems: [],
@@ -28,7 +28,7 @@ Vue.component('cart', {
                         }
                     })
             }
-            
+            this.total = this.getTotal();
         },
         remove(product){
             if(product.quantity > 1){
@@ -48,6 +48,17 @@ Vue.component('cart', {
                         }
                     })
             }
+        },
+        removeAllOfType(product){
+            this.$parent.deleteJson(`/api/cart/${product.id_product}`)
+            .then(data => {
+                if(data.result){
+                    this.cartItems.splice(this.cartItems.indexOf(product), 1);
+                    for (let i = 0; i < product.quantity; i++){
+                        this.totalSumArr.splice(this.totalSumArr.indexOf(product), 1);
+                    }
+                }
+            })
         },
         getTotal(){
             return total = this.totalSumArr.reduce( (a, b) => { return a + b; }, 0);
@@ -82,7 +93,7 @@ Vue.component('cart', {
                     :key="product.id_product"
                     :img="product.img"
                     :cart-item="product"
-                    @remove="remove"></cart-item-extended>
+                    @remove="remove" @addProduct="addProduct" @removeAllOfType="removeAllOfType"></cart-item-extended>
                     <div class="flex-buttons">
                         <button class="button_continue flexed-button">CLEAR SHOPPING CART</button>
                         <button class="button_continue flexed-button"><a href="index.html" class="check-out__proceed">CONTINUE sHOPPING</a></button>
@@ -90,6 +101,13 @@ Vue.component('cart', {
                 </div>
                 </section>
                 <check-out-details :total="getTotal()"></check-out-details>
+                </div>
+
+                <div v-else-if="inside" class="drop-cart">
+                    <a class="cart" href="#"><i class="fas fa-shopping-cart cart-header" :class="{cart__empty: !cartItems.length}"></i></a>
+                    <div class="drop drop-cart-after">
+                        <p class="message_cart__empty">Proceed to checkout, please. <br><br>Or you could continue shopping</p>
+                    </div>
                 </div>
 
                 <div v-else class="drop-cart">
@@ -104,7 +122,7 @@ Vue.component('cart', {
                             @remove="remove"></cart-item>
                             <div class="drop-cart-total">
                                 <h3 class="drop-cart-total-h3">TOTAL</h3>
-                                <h3 class="drop-cart-total-h3">$ {{ getTotal() }} </h3>
+                                <h3 class="drop-cart-total-h3">$ {{ total }} </h3>
                             </div>
                             <a href="checkout.html"><button class="button_continue drop-cart-checkout">
                                 Checkout
@@ -185,9 +203,11 @@ Vue.component('cart-item-extended', {
                         <h6 class="cart-oder-details-box-h6"><span class="bolder">Size:</span> one-fits-all</h6>
                     </div>
                     <h6 class="cart-oder-details-box-h6 cart-price"> $ {{cartItem.price}}</h6>
-                    <input v-model ="cartItem.quantity" class="cart-quantity select" type="number" placeholder="2" required>
+                    <button class="button_delete-item" @click="$emit('remove', cartItem)"><i class="fas fa-minus-circle"></i></button>
+                    <h6 class="cart-quantity">{{cartItem.quantity}}</h6>
+                    <button class="button_delete-item" @click="$emit('addProduct', cartItem)"><i class="fas fa-plus-circle"></i></button>
                     <h6 class="cart-oder-details-box-h6 cart-price">FREE</h6>
                     <h6 class="cart-oder-details-box-h6 cart-price-subtotal">$ {{cartItem.quantity*cartItem.price}} </h6>
-                    <button class="button_delete-item" @click="$emit('remove', cartItem)"> <i class="fas fa-times-circle"></i></button>
+                    <button class="button_delete-item" @click="$emit('removeAllOfType', cartItem)"><i class="fas fa-times-circle"></i></button>
                 </article>`
 })

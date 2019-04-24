@@ -1520,16 +1520,13 @@ button {
 }
 
 .cart-quantity {
-    padding-left: 6px;
+    padding-left: 10px;
+    padding-right: 10px;
     text-align: center;
     font-size: 13px;
     font-weight: 400;
     line-height: 20px;
-    width: 54px;
-    height: 30px;
-    margin-top: 40px;
-    margin-left: 108px;
-    margin-right: 92px;
+    margin-top: 49px;
 }
 
 #quantity::placeholder {
@@ -1920,6 +1917,30 @@ button {
     cursor: pointer;
 }
 
+.fa-plus-circle {
+    padding: 5px;
+    color: grey;
+    margin-right: 70px;
+    transition: color 0.2s;
+}
+
+.fa-plus-circle:hover {
+    color: #f16d7f;
+    cursor: pointer;
+}
+
+.fa-minus-circle{
+    margin-left: 85px;
+    padding: 5px;
+    color: grey;
+    transition: color 0.2s;
+}
+
+.fa-minus-circle:hover {
+    color: #f16d7f;
+    cursor: pointer;
+}
+
 .button_delete-item:focus {
     outline: none;
 }
@@ -2007,7 +2028,6 @@ button {
     font-size: 13px;
     font-weight: 300;
     line-height: 20px;
-    /* Text style for "C, olor:," */
     color: #575757;
     font-weight: 400;
 }
@@ -2018,7 +2038,7 @@ button {
 }
 
 .cart-price {
-    margin-top: 45px;
+    margin-top: 49px;
 }
 
 .drop-second {
@@ -2044,7 +2064,7 @@ button {
 }
 
 .cart-price-subtotal {
-    margin-top: 45px;
+    margin-top: 49px;
     margin-left: 110px;
     margin-right: 32px;
 }
