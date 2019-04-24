@@ -1,39 +1,9 @@
 {
     "contents": [
         {
-            "quantity": 1,
-            "id_product": 127,
-            "img": "img/featured5.png",
-            "name": "MANGO PEOPLE T-SHIRT",
-            "page": "single-page.html",
-            "price": 52,
-            "stars": 5,
-            "liked": false
-        },
-        {
-            "quantity": 1,
-            "id_product": 128,
-            "img": "img/featured6.png",
-            "name": "MANGO PEOPLE T-SHIRT",
-            "page": "single-page.html",
-            "price": 52,
-            "stars": 5,
-            "liked": false
-        },
-        {
-            "quantity": 1,
-            "id_product": 129,
-            "img": "img/featured7.png",
-            "name": "MANGO PEOPLE T-SHIRT",
-            "page": "single-page.html",
-            "price": 52,
-            "stars": 3,
-            "liked": false
-        },
-        {
-            "quantity": 1,
-            "id_product": 234,
-            "img": "img/featured8.png",
+            "quantity": 2,
+            "id_product": 123,
+            "img": "img/featured1.png",
             "name": "MANGO PEOPLE T-SHIRT",
             "page": "single-page.html",
             "price": 52,

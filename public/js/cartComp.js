@@ -60,17 +60,17 @@ Vue.component('cart', {
                 }
             })
         },
-        removeAll(){
-            this.cartItems.forEach( el => {
-                this.$parent.deleteJson(`/api/cart/${el.id_product}`)
-                .then(data => {
-                    if(data.result){
-                        this.cartItems.splice(this.cartItems.indexOf(el), 1);
-                        this.totalSumArr = [];
-                    }
-            })
-            }); 
-        },
+        // removeAll(){ если делать так, по второму нажатию за сессию падает весь сервер
+        //     this.totalSumArr = [];
+        //     this.cartItems.forEach( el => {
+        //         this.$parent.deleteJson(`/api/cart/${el.id_product}`)
+        //         .then(data => {
+        //             if(data.result){
+        //                 this.cartItems.splice(this.cartItems.indexOf(el), 1);
+        //             }
+        //     })
+        //     }); 
+        // },
         getTotal(){
             return total = this.totalSumArr.reduce( (a, b) => { return a + b; }, 0);
         }
@@ -108,8 +108,8 @@ Vue.component('cart', {
                     @addProduct="addProduct" 
                     @removeAllOfType="removeAllOfType"></cart-item-extended>
                     <div class="flex-buttons">
-                        <button class="button_continue flexed-button" @click="removeAll()">CLEAR SHOPPING CART</button>
-                        <button class="button_continue flexed-button"><a href="index.html" class="check-out__proceed">CONTINUE sHOPPING</a></button>
+                        <button class="button_continue flexed-button disabled" @click="removeAll()">CLEAR SHOPPING CART</button>
+                        <a href="index.html" class="check-out__proceed"><button class="button_continue flexed-button">CONTINUE sHOPPING</button></a>
                     </div>
                 </div>
                 </section>
