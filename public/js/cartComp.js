@@ -204,6 +204,7 @@ Vue.component('cart-item', {
                         <h6 class="drop-cart-box-h6">{{ cartItem.quantity }} x $ {{cartItem.price}} = $ {{cartItem.quantity*cartItem.price}}</h6>
                     </div>
                     <button class="button_delete-item circle_cart__first" @click="$emit('remove', cartItem)"> <i class="fas fa-minus-circle circle_cart"></i></button>
+                    <h6 class="cart-quality-num">{{ cartItem.quantity }}</h6>
                     <button class="button_delete-item" @click="$emit('addProduct', cartItem)"><i class="fas fa-plus-circle circle_cart"></i></button>
                 </div>`
 });
